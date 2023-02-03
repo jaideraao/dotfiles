@@ -58,3 +58,4 @@ set wildmode=list:longest,full
 " inoremap { {}<esc>i
 " inoremap [ []<esc>i
 
+let g:termdebugger = "arm-none-eabi-gdb"
