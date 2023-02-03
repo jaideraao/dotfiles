@@ -9,6 +9,22 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tab_count = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_format = {
+\ '0': '⓪:',
+\ '1': '⓵ ',
+\ '2': '⓶,',
+\ '3': '⓷ ',
+\ '4': '⓸ ',
+\ '5': '⓹ ',
+\ '6': '⓺ ',
+\ '7': '⓻ ',
+\ '8': '⓼ ',
+\ '9': '⓽ '
+\}
+
 set autoindent
 set autoread
 " set backspace=2
@@ -30,7 +46,7 @@ set incsearch
 "set listchars=tab:>\ ,trail:-,nbsp:+
 "set nrformats=bin,hex
 set number
-"set ruler
+set ruler
 "set sessionoptions-=options
 set shiftwidth=4
 "set shortmess=F
