@@ -1,3 +1,7 @@
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
+let g:airline_solarized_bg='dark'
+
 syntax enable
 set background=dark
 colorscheme solarized
@@ -47,10 +51,9 @@ noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
 noremap <c-u> :w<cr>
 
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
+" inoremap ' ''<esc>i
+" inoremap " ""<esc>i
+" inoremap ( ()<esc>i
+" inoremap { {}<esc>i
+" inoremap [ []<esc>i
 
-let g:airline_powerline_fonts = 1
