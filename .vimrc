@@ -1,16 +1,9 @@
-syntax enable
-set background=dark
-colorscheme solarized
-filetype plugin indent on
-set t_Co=256
-
-let g:solarized_termcolors=256
+let g:solarized_termcolors = 256
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = 'dark'
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tab_count = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_idx_format = {
 \ '0': '⓪:',
@@ -25,54 +18,61 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 \ '9': '⓽ '
 \}
 
+syntax enable
+set background=dark
+colorscheme solarized
+filetype plugin indent on
+set t_Co=256
+
 set autoindent
 set autoread
-" set backspace=2
-" set backspace=indent,eol,start
+set autowrite
 set belloff=all
-set clipboard=unnamed,unnamedplus
-"set complete-=i
-set cscopeverbose
 set encoding=utf-8
 set expandtab
 set foldmethod=indent
-set formatoptions=tcqj
 set fsync
 set history=10000
 set hlsearch
+set ignorecase
 set incsearch
-"set langnoremap
-"set laststatus=2
-"set listchars=tab:>\ ,trail:-,nbsp:+
-"set nrformats=bin,hex
 set number
 set ruler
-"set sessionoptions-=options
 set shiftwidth=4
-"set shortmess=F
-"set showcmd
+set showcmd
+set showmatch
 set sidescroll=1
 set smarttab
 set tabpagemax=50
 set tabstop=4
-" set tags=./tags;,tags
-set ttimeoutlen=50
+set termguicolors
 set ttyfast
-" set viminfo+=!
 set wildmenu
 set wildmode=list:longest,full
 
-"noremap <c-h> <c-w><c-h>
-"noremap <c-j> <c-w><c-j>
-"noremap <c-k> <c-w><c-k>
-"noremap <c-l> <c-w><c-l>
-"noremap <c-u> :w<cr>
+noremap æ :w<cr>
+noremap œ :q!<cr>
+noremap € :e!<cr>
+noremap ∑ :x<cr>
 
-" inoremap ' ''<esc>i
-" inoremap " ""<esc>i
-" inoremap ( ()<esc>i
-" inoremap { {}<esc>i
-" inoremap [ []<esc>i
+noremap <Tab> :bn<cr>
+noremap <S-Tab> :bp<cr>
+noremap ∂ :bd<cr>
+
+noremap ] :vnew<cr>
+noremap – :new<cr>
+
+noremap † :terminal<cr>
+
+autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
+autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
+autocmd filetype c,cpp,h noremap <buffer> ® :make rebuild<cr>
+
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
 
 let g:termdebugger = "arm-none-eabi-gdb"
 
