@@ -4,6 +4,7 @@ let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_idx_format = {
 \ '0': '⓪:',
@@ -30,16 +31,15 @@ set autowrite
 set belloff=all
 set encoding=utf-8
 set expandtab
-set foldmethod=indent
 set fsync
 set history=10000
 set hlsearch
 set ignorecase
 set incsearch
+set nocompatible
 set number
 set ruler
 set shiftwidth=4
-set showcmd
 set showmatch
 set sidescroll=1
 set smarttab
@@ -67,12 +67,15 @@ noremap † :terminal<cr>
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
 autocmd filetype c,cpp,h noremap <buffer> ® :make rebuild<cr>
+autocmd filetype c,cpp,h noremap <buffer> ç :Termdebug<cr>
 
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
+"inoremap ' ''<esc>i
+"inoremap " ""<esc>i
 inoremap ( ()<esc>i
 inoremap { {}<esc>i
 inoremap [ []<esc>i
+inoremap < <><esc>i
 
+packadd termdebug
 let g:termdebugger = "arm-none-eabi-gdb"
 
