@@ -48,7 +48,7 @@ set tabstop=4
 set termguicolors
 set ttyfast
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=list:full,full
 
 noremap æ :w<cr>
 noremap œ :q!<cr>
@@ -59,8 +59,8 @@ noremap <Tab> :bn<cr>
 noremap <S-Tab> :bp<cr>
 noremap ∂ :bd<cr>
 
-noremap ] :vnew<cr>
-noremap – :new<cr>
+noremap ] :vsplit<cr>
+noremap – :split<cr>
 
 noremap † :terminal<cr>
 
