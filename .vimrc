@@ -5,23 +5,10 @@ let g:airline_solarized_bg = 'dark'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#buffer_idx_format = {
-\ '0': '⓪:',
-\ '1': '⓵ ',
-\ '2': '⓶,',
-\ '3': '⓷ ',
-\ '4': '⓸ ',
-\ '5': '⓹ ',
-\ '6': '⓺ ',
-\ '7': '⓻ ',
-\ '8': '⓼ ',
-\ '9': '⓽ '
-\}
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme default
 filetype plugin indent on
 set t_Co=256
 
@@ -69,13 +56,18 @@ autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
 autocmd filetype c,cpp,h noremap <buffer> ® :make rebuild<cr>
 autocmd filetype c,cpp,h noremap <buffer> ç :Termdebug<cr>
 
-"inoremap ' ''<esc>i
-"inoremap " ""<esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
-inoremap < <><esc>i
-
 packadd termdebug
 let g:termdebugger = "arm-none-eabi-gdb"
 
+"if executable('clangd')
+"    augroup lsp_clangd
+"        autocmd!
+"        autocmd User lsp_setup call lsp#register_server({
+"            \ 'name': 'clangd',
+"            \ 'cmd': {server_info->['clangd']},
+"            \ 'whitelist': ['c', 'cpp'],
+"            \ })
+"        autocmd FileType c setlocal omnifunc=lsp#complete
+"        autocmd FileType cpp setlocal omnifunc=lsp#complete
+"    augroup end
+"endif
