@@ -11,6 +11,7 @@ set background=dark
 colorscheme default
 filetype plugin indent on
 set t_Co=256
+highlight VertSplit cterm=NONE
 
 set autoindent
 set autoread
@@ -72,5 +73,3 @@ let g:termdebugger = "arm-none-eabi-gdb"
 "        autocmd FileType cpp setlocal omnifunc=lsp#complete
 "    augroup end
 "endif
-
-highlight VertSplit cterm=NONE
