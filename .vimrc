@@ -23,6 +23,7 @@ set history=10000
 set hlsearch
 set ignorecase
 set incsearch
+set laststatus=0
 set nocompatible
 set number
 set ruler
@@ -49,7 +50,7 @@ noremap ∂ :bd<cr>
 noremap ] :vsplit<cr>
 noremap – :split<cr>
 
-noremap † :terminal<cr>
+noremap † :Termdebug<cr>
 
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
@@ -71,3 +72,5 @@ let g:termdebugger = "arm-none-eabi-gdb"
 "        autocmd FileType cpp setlocal omnifunc=lsp#complete
 "    augroup end
 "endif
+
+highlight VertSplit cterm=NONE
