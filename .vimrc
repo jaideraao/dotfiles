@@ -35,7 +35,6 @@ set sidescroll=1
 set smarttab
 set tabpagemax=50
 set tabstop=4
-"set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -53,7 +52,7 @@ noremap ∂ :bd<cr>
 noremap ] :vsplit<cr>
 noremap – :split<cr>
 
-noremap † :Termdebug<cr>
+noremap † :vertical terminal<cr>
 
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
@@ -62,16 +61,3 @@ autocmd filetype c,cpp,h noremap <buffer> ç :Termdebug<cr>
 
 packadd termdebug
 let g:termdebugger = "arm-none-eabi-gdb"
-
-"if executable('clangd')
-"    augroup lsp_clangd
-"        autocmd!
-"        autocmd User lsp_setup call lsp#register_server({
-"            \ 'name': 'clangd',
-"            \ 'cmd': {server_info->['clangd']},
-"            \ 'whitelist': ['c', 'cpp'],
-"            \ })
-"        autocmd FileType c setlocal omnifunc=lsp#complete
-"        autocmd FileType cpp setlocal omnifunc=lsp#complete
-"    augroup end
-"endif
