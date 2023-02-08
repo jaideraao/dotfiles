@@ -1,15 +1,16 @@
-let g:solarized_termcolors = 256
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'solarized'
-let g:airline_solarized_bg = 'dark'
+"let g:solarized_termcolors = 256
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme = 'solarized'
+"let g:airline_solarized_bg = 'dark'
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 syntax enable
 set background=dark
 colorscheme default
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 set t_Co=256
 highlight VertSplit cterm=NONE
 
@@ -34,15 +35,16 @@ set sidescroll=1
 set smarttab
 set tabpagemax=50
 set tabstop=4
-set termguicolors
+"set termguicolors
 set ttyfast
 set wildmenu
-set wildmode=list:full,full
+set wildoptions=pum
 
 noremap æ :w<cr>
 noremap œ :q!<cr>
 noremap € :e!<cr>
 noremap ∑ :x<cr>
+noremap … :ls<cr>
 
 noremap <Tab> :bn<cr>
 noremap <S-Tab> :bp<cr>
