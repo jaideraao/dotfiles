@@ -1,18 +1,14 @@
-"let g:solarized_termcolors = 256
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme = 'solarized'
-"let g:airline_solarized_bg = 'dark'
-
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 syntax enable
 set background=dark
-colorscheme default
+colorscheme solarized
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
-set t_Co=256
-highlight VertSplit cterm=NONE
+highlight vertsplit cterm=NONE
+highlight vertsplit term=NONE
 
 set autoindent
 set autoread
@@ -33,7 +29,6 @@ set shiftwidth=4
 set showmatch
 set sidescroll=1
 set smarttab
-set tabpagemax=50
 set tabstop=4
 set ttyfast
 set wildmenu
@@ -42,8 +37,7 @@ set wildoptions=pum
 noremap æ :w<cr>
 noremap œ :q!<cr>
 noremap € :e!<cr>
-noremap ∑ :x<cr>
-noremap … :ls<cr>
+noremap ∑ :x!<cr>
 
 noremap <Tab> :bn<cr>
 noremap <S-Tab> :bp<cr>
@@ -52,12 +46,6 @@ noremap ∂ :bd<cr>
 noremap ] :vsplit<cr>
 noremap – :split<cr>
 
-noremap † :vertical terminal<cr>
-
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
 autocmd filetype c,cpp,h noremap <buffer> ® :make rebuild<cr>
-autocmd filetype c,cpp,h noremap <buffer> ç :Termdebug<cr>
-
-packadd termdebug
-let g:termdebugger = "arm-none-eabi-gdb"
