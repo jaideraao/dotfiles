@@ -7,3 +7,6 @@
 [submodule ".vim/pack/dist/start/vim-airline-themes"]
 	path = .vim/pack/dist/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/pack/dist/start/vim-cpp-modern"]
+	path = .vim/pack/dist/start/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern.git
