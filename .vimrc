@@ -2,10 +2,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-"let g:cpp_function_highlight = 1
-"let g:cpp_attributes_highlight = 1
-"let g:cpp_member_highlight = 1
-"let g:cpp_simple_highlight = 1
+let g:cpp_function_highlight = 1
+let g:cpp_attributes_highlight = 1
+let g:cpp_member_highlight = 1
+let g:cpp_simple_highlight = 1
 
 syntax enable
 set background=dark
@@ -42,10 +42,10 @@ noremap € :e!<cr>
 noremap ∑ :x!<cr>
 noremap ∂ :bd!<cr>
 
-noremap <esc><esc> :nohlsearch<cr>
-
 noremap <Tab> :bn<cr>
 noremap <S-Tab> :bp<cr>
+
+noremap <esc><esc> :nohlsearch<cr>
 
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
