@@ -1,12 +1,3 @@
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-let g:cpp_function_highlight = 1
-let g:cpp_attributes_highlight = 1
-let g:cpp_member_highlight = 1
-let g:cpp_simple_highlight = 1
-
 syntax enable
 set background=dark
 colorscheme solarized
