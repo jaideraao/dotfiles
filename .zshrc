@@ -9,5 +9,3 @@ then
     autoload -Uz compinit
     compinit
 fi
-
-# fpath=(~/.zsh $fpath)
