@@ -15,14 +15,12 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=0
-"set nocompatible
 set number
 set ruler
 set shiftwidth=4
 set showmatch
 set smarttab
 set tabstop=4
-set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum

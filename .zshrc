@@ -1,3 +1,4 @@
+export COLORTERM=truecolor
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 PS1="%B%F{red}%n/>%f%b "
