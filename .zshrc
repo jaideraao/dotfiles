@@ -10,4 +10,4 @@ then
     compinit
 fi
 
-fpath=(~/.zsh $fpath)
+# fpath=(~/.zsh $fpath)

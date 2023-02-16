@@ -15,7 +15,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=0
-set nocompatible
+"set nocompatible
 set number
 set ruler
 set shiftwidth=4
