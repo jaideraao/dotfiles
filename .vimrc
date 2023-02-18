@@ -25,17 +25,26 @@ set ttyfast
 set wildmenu
 set wildoptions=pum
 
-noremap æ :w!<cr>
-noremap œ :q!<cr>
-noremap € :e!<cr>
-noremap ∑ :x!<cr>
-noremap ∂ :bd!<cr>
+noremap <silent> æ :w!<cr>
+noremap <silent> œ :q!<cr>
+noremap <silent> € :e!<cr>
+noremap <silent> ∑ :x!<cr>
+noremap <silent> ∂ :bd!<cr>
 
-noremap <Tab> :bn<cr>
-noremap <S-Tab> :bp<cr>
+noremap <silent> <Tab> :bn<cr>
+noremap <silent> <S-Tab> :bp<cr>
 
-noremap <esc><esc> :nohlsearch<cr>
+noremap <silent> <esc><esc> :nohlsearch<cr>
 
 autocmd filetype c,cpp,h noremap <buffer> ß :make all<cr>
 autocmd filetype c,cpp,h noremap <buffer> © :make clean<cr>
 autocmd filetype c,cpp,h noremap <buffer> ® :make rebuild<cr>
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+let g:cpp_function_highlight = 1
+let g:cpp_attributes_highlight = 1
+let g:cpp_member_highlight = 1
+let g:cpp_simple_highlight = 1
