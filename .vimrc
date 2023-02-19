@@ -1,33 +1,33 @@
 let mapleader="\<space>"
 
+set autoindent
+set autoread
+set autowrite
+set belloff=all
+set encoding=utf-8
+set expandtab
+set fsync
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=0
+set nocompatible
+set number
+set ruler
+set shiftwidth=4
+set showmatch
+set smarttab
+set tabstop=4
+set ttyfast
+set undofile
+set wildmenu
+set wildoptions=pum
+
 syntax enable
-setlocal background=dark
+set background=dark
 colorscheme solarized
 filetype plugin indent on
-setlocal omnifunc=syntaxcomplete#Complete
-
-setlocal autoindent
-setlocal autoread
-setlocal autowrite
-setlocal belloff=all
-setlocal encoding=utf-8
-setlocal expandtab
-setlocal fsync
-setlocal hlsearch
-setlocal ignorecase
-setlocal incsearch
-setlocal laststatus=0
-setlocal nocompatible
-setlocal number
-setlocal ruler
-setlocal shiftwidth=4
-setlocal showmatch
-setlocal smarttab
-setlocal tabstop=4
-setlocal ttyfast
-setlocal undofile
-setlocal wildmenu
-setlocal wildoptions=pum
+set omnifunc=syntaxcomplete#Complete
 
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
@@ -69,12 +69,12 @@ let g:cpp_member_highlight = 1
 let g:cpp_simple_highlight = 1
 
 let g:lsp_use_native_client = 1
-let g:lsp_semantic_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_diagnostics_float_cursor = 1
-let g:lsp_diagnostics_float_insert_mode_enabled = 1
-let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
-let g:lsp_inlay_hints_enabled = 1
+"let g:lsp_semantic_enabled = 1
+"let g:lsp_diagnostics_echo_cursor = 1
+"let g:lsp_diagnostics_float_cursor = 1
+"let g:lsp_diagnostics_float_insert_mode_enabled = 1
+"let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
+"let g:lsp_inlay_hints_enabled = 1
 let g:lsp_async_completion = 1
 
 if executable('clangd')
@@ -89,3 +89,13 @@ if executable('clangd')
         autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
     augroup end
 endif
+
+function! WindowNumber(...)
+    let builder = a:1
+    let context = a:2
+    call builder.add_section('airline_b', ' %{tabpagewinnr(tabpagenr())} ')
+    return 0
+endfunction
+
+call airline#add_statusline_func('WindowNumber')
+call airline#add_inactive_statusline_func('WindowNumber')
