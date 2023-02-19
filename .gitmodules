@@ -16,3 +16,6 @@
 [submodule ".vim/pack/dist/start/promptline.vim"]
 	path = .vim/pack/dist/start/promptline.vim
 	url = https://github.com/edkolev/promptline.vim.git
+[submodule ".vim/pack/dist/start/nerdcommenter"]
+	path = .vim/pack/dist/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git

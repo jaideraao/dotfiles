@@ -11,4 +11,4 @@ then
     compinit
 fi
 
-[ -f ~/.promptline.sh ] && source ~/.promptline.sh
+# [ -f ~/.promptline.sh ] && source ~/.promptline.sh
