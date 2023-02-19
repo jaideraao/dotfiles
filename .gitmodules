@@ -13,3 +13,6 @@
 [submodule ".vim/pack/dist/start/vim-lsp"]
 	path = .vim/pack/dist/start/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule ".vim/pack/dist/start/promptline.vim"]
+	path = .vim/pack/dist/start/promptline.vim
+	url = https://github.com/edkolev/promptline.vim.git

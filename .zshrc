@@ -10,3 +10,5 @@ then
     autoload -Uz compinit
     compinit
 fi
+
+[ -f ~/.promptline.sh ] && source ~/.promptline.sh

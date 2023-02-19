@@ -17,6 +17,7 @@ setlocal hlsearch
 setlocal ignorecase
 setlocal incsearch
 setlocal laststatus=0
+setlocal nocompatible
 setlocal number
 setlocal ruler
 setlocal shiftwidth=4
@@ -35,8 +36,8 @@ noremap <silent> <leader>x :x!<cr>
 noremap <silent> <leader>d :bd!<cr>
 noremap <silent> <leader>a :%bd!<cr>
 noremap <silent> <leader>. :pwd<cr>
-noremap <silent> <tab> :bn<cr>
-noremap <silent> <s-tab> :bp<cr>
+"noremap <silent> <tab> :bn<cr>
+"noremap <silent> <s-tab> :bp<cr>
 noremap <silent> <esc><esc> :noh<cr>
 
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
@@ -46,6 +47,21 @@ autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+noremap <leader>1 <Plug>AirlineSelectTab1
+noremap <leader>2 <Plug>AirlineSelectTab2
+noremap <leader>3 <Plug>AirlineSelectTab3
+noremap <leader>4 <Plug>AirlineSelectTab4
+noremap <leader>5 <Plug>AirlineSelectTab5
+noremap <leader>6 <Plug>AirlineSelectTab6
+noremap <leader>7 <Plug>AirlineSelectTab7
+noremap <leader>8 <Plug>AirlineSelectTab8
+noremap <leader>9 <Plug>AirlineSelectTab9
+noremap <leader>0 <Plug>AirlineSelectTab0
+noremap <tab> <Plug>AirlineSelectPrevTab
+noremap <s-tab> <Plug>AirlineSelectNextTab
+
+let g:airline#extensions#lsp#enabled = 1
 
 let g:cpp_function_highlight = 1
 let g:cpp_attributes_highlight = 1
