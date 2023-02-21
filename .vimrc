@@ -1,9 +1,13 @@
 let mapleader="\<space>"
 
+packadd termdebug
+let g:termdebugger = "arm-none-eabi-gdb"
+
 set autoindent
 set autoread
 set autowrite
 set belloff=all
+set cursorline
 set encoding=utf-8
 set expandtab
 set fsync
@@ -25,7 +29,7 @@ set wildoptions=pum
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme codedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
@@ -69,7 +73,7 @@ let g:cpp_member_highlight = 1
 let g:cpp_simple_highlight = 1
 
 let g:lsp_use_native_client = 1
-"let g:lsp_semantic_enabled = 1
+let g:lsp_semantic_enabled = 1
 "let g:lsp_diagnostics_echo_cursor = 1
 "let g:lsp_diagnostics_float_cursor = 1
 "let g:lsp_diagnostics_float_insert_mode_enabled = 1
@@ -77,18 +81,18 @@ let g:lsp_use_native_client = 1
 "let g:lsp_inlay_hints_enabled = 1
 let g:lsp_async_completion = 1
 
-if executable('clangd')
-    augroup lsp_clangd
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-            \ 'name': 'clangd',
-            \ 'cmd': {server_info->['clangd', '-background-index']},
-            \ 'whitelist': ['c', 'cpp'],
-            \ })
-        autocmd FileType c,cpp setlocal omnifunc=lsp#complete
-        autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
-    augroup end
-endif
+"if executable('clangd')
+"    augroup lsp_clangd
+"        autocmd!
+"        autocmd User lsp_setup call lsp#register_server({
+"            \ 'name': 'clangd',
+"            \ 'cmd': {server_info->['clangd', '-background-index']},
+"            \ 'whitelist': ['c', 'cpp'],
+"            \ })
+"        autocmd FileType c,cpp setlocal omnifunc=lsp#complete
+"        autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
+"    augroup end
+"endif
 
 function! WindowNumber(...)
     let builder = a:1

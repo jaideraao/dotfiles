@@ -1,7 +1,7 @@
 # export COLORTERM=truecolor
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
-PS1="%B%F{red}%n/>%f%b "
+PS1="%F{red}/>%f "
 
 if type brew &>/dev/null
 then
@@ -10,5 +10,3 @@ then
     autoload -Uz compinit
     compinit
 fi
-
-# [ -f ~/.promptline.sh ] && source ~/.promptline.sh

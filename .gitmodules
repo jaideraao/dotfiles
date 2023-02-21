@@ -19,3 +19,6 @@
 [submodule ".vim/pack/dist/start/nerdcommenter"]
 	path = .vim/pack/dist/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/dist/start/vim-code-dark"]
+	path = .vim/pack/dist/start/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
