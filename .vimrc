@@ -91,16 +91,16 @@ let g:lsp_inlay_hints_enabled = 1
 let g:lsp_async_completion = 1
 
 " if executable('clangd')
-"    augroup lsp_clangd
-"        autocmd!
-"        autocmd User lsp_setup call lsp#register_server({
-"            \ 'name': 'clangd',
-"            \ 'cmd': {server_info->['clangd', '-background-index']},
-"            \ 'whitelist': ['c', 'cpp'],
-"            \ })
-"        autocmd FileType c,cpp setlocal omnifunc=lsp#complete
-"        autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
-"    augroup end
+   " augroup lsp_clangd
+       " autocmd!
+       " autocmd User lsp_setup call lsp#register_server({
+           " \ 'name': 'clangd',
+           " \ 'cmd': {server_info->['clangd', '-background-index']},
+           " \ 'whitelist': ['c', 'cpp'],
+           " \ })
+       " autocmd FileType c,cpp setlocal omnifunc=lsp#complete
+       " autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
+   " augroup end
 " endif
 
 function! WindowNumber(...)
