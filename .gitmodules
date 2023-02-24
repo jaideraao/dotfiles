@@ -22,3 +22,6 @@
 [submodule ".vim/pack/dist/start/vim-code-dark"]
 	path = .vim/pack/dist/start/vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark.git
+[submodule ".vim/pack/dist/start/onedark.vim"]
+	path = .vim/pack/dist/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
