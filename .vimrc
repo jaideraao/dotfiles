@@ -31,16 +31,16 @@ set wildoptions=pum
 syntax enable
 " set t_Co=256
 " set t_ut=
-let g:onedark_terminal_italics=1
+let g:onedark_terminal_italics = 1
 set background=dark
 colorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
-let &t_SI.="\e[5 q"
-let &t_SR.="\e[5 q"
-let &t_EI.="\e[5 q"
-let &t_vi.="\e[5 q"
+let &t_SI.="\e[1 q"
+let &t_SR.="\e[1 q"
+let &t_EI.="\e[1 q"
+let &t_vi.="\e[1 q"
 
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
