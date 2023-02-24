@@ -1,27 +1,15 @@
-[submodule ".vim/pack/dist/start/vim-colors-solarized"]
-	path = .vim/pack/dist/start/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/pack/dist/start/vim-cpp-modern"]
 	path = .vim/pack/dist/start/vim-cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern.git
 [submodule ".vim/pack/dist/start/vim-airline"]
 	path = .vim/pack/dist/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/dist/start/vim-airline-themes"]
-	path = .vim/pack/dist/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule ".vim/pack/dist/start/vim-lsp"]
 	path = .vim/pack/dist/start/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
-[submodule ".vim/pack/dist/start/promptline.vim"]
-	path = .vim/pack/dist/start/promptline.vim
-	url = https://github.com/edkolev/promptline.vim.git
 [submodule ".vim/pack/dist/start/nerdcommenter"]
 	path = .vim/pack/dist/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
-[submodule ".vim/pack/dist/start/vim-code-dark"]
-	path = .vim/pack/dist/start/vim-code-dark
-	url = https://github.com/tomasiser/vim-code-dark.git
 [submodule ".vim/pack/dist/start/onedark.vim"]
 	path = .vim/pack/dist/start/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
