@@ -37,6 +37,11 @@ colorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
+let &t_SI.="\e[5 q"
+let &t_SR.="\e[5 q"
+let &t_EI.="\e[5 q"
+let &t_vi.="\e[5 q"
+
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
 noremap <silent> <leader>e :e!<cr>
