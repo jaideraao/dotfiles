@@ -51,7 +51,22 @@ noremap <silent> <leader>a :%bd!<cr>
 noremap <silent> <leader>. :pwd<cr>
 noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
-noremap <silent> <esc><esc> :noh<cr>
+noremap <silent> <leader><esc> :noh<cr>
+
+tnoremap <silent> <s-up> <c-w>k
+tnoremap <silent> <s-right> <c-w>l
+tnoremap <silent> <s-down> <c-w>j
+tnoremap <silent> <s-left> <c-w>h
+
+inoremap <silent> <s-up> <c-w>k
+inoremap <silent> <s-right> <c-w>l
+inoremap <silent> <s-down> <c-w>j
+inoremap <silent> <s-left> <c-w>h
+
+noremap <silent> <s-up> <c-w>k
+noremap <silent> <s-right> <c-w>l
+noremap <silent> <s-down> <c-w>j
+noremap <silent> <s-left> <c-w>h
 
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
@@ -108,12 +123,19 @@ let g:lsp_async_completion = 1
    " augroup end
 " endif
 
-function! WindowNumber(...)
+function! WindowNumber_active(...)
+    let builder = a:1
+    let context = a:2
+    call builder.add_section('airline_b', ' %{tabpagewinnr(tabpagenr())} ')
+    return 0
+endfunction
+
+function! WindowNumber_inactive(...)
     let builder = a:1
     let context = a:2
     call builder.add_section('airline_a', ' %{tabpagewinnr(tabpagenr())} ')
     return 0
 endfunction
 
-call airline#add_statusline_func('WindowNumber')
-call airline#add_inactive_statusline_func('WindowNumber')
+call airline#add_statusline_func('WindowNumber_active')
+call airline#add_inactive_statusline_func('WindowNumber_inactive')
