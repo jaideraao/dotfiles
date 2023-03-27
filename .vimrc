@@ -8,7 +8,7 @@ set autoread
 set autowrite
 set belloff=all
 set clipboard=unnamed
-set cursorline
+" set cursorline
 set encoding=utf-8
 set expandtab
 set fsync
@@ -33,7 +33,7 @@ syntax enable
 " set t_ut=
 let g:onedark_terminal_italics = 1
 set background=dark
-colorscheme onedark
+" clorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
@@ -137,5 +137,5 @@ function! WindowNumber_inactive(...)
     return 0
 endfunction
 
-call airline#add_statusline_func('WindowNumber_active')
-call airline#add_inactive_statusline_func('WindowNumber_inactive')
+" call airline#add_statusline_func('WindowNumber_active')
+" call airline#add_inactive_statusline_func('WindowNumber_inactive')
