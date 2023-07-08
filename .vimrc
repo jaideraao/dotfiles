@@ -22,17 +22,17 @@ set shiftwidth=4
 set showmatch
 set smarttab
 set tabstop=4
-" set termguicolors
+set termguicolors
 set ttyfast
 set undofile
 set wildmenu
 set wildoptions=pum
 
 syntax enable
-set t_Co=256
+" set t_Co=256
 " set t_ut=
 let g:onedark_hide_endofbuffer = 1
-let g:onedark_termcolors = 256
+" let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
 let g:airline_theme='onedark'
 set background=dark
@@ -76,9 +76,9 @@ autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#formatter = 'unique_tail'
-" let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 " noremap <leader>1 <Plug>AirlineSelectTab1
 " noremap <leader>2 <Plug>AirlineSelectTab2
 " noremap <leader>3 <Plug>AirlineSelectTab3
@@ -140,5 +140,5 @@ function! WindowNumber_inactive(...)
     return 0
 endfunction
 
-" call airline#add_statusline_func('WindowNumber_active')
-" call airline#add_inactive_statusline_func('WindowNumber_inactive')
+call airline#add_statusline_func('WindowNumber_active')
+call airline#add_inactive_statusline_func('WindowNumber_inactive')
