@@ -1,9 +1,3 @@
-[submodule ".vim/pack/dist/start/vim-cpp-modern"]
-	path = .vim/pack/dist/start/vim-cpp-modern
-	url = https://github.com/bfrg/vim-cpp-modern.git
-[submodule ".vim/pack/dist/start/vim-lsp"]
-	path = .vim/pack/dist/start/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
 [submodule ".vim/pack/dist/start/nerdcommenter"]
 	path = .vim/pack/dist/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
