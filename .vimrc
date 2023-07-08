@@ -8,7 +8,7 @@ set autoread
 set autowrite
 set belloff=all
 set clipboard=unnamed
-" set cursorline
+set cursorline
 set encoding=utf-8
 set expandtab
 set fsync
@@ -22,11 +22,15 @@ set shiftwidth=4
 set showmatch
 set smarttab
 set tabstop=4
-set termguicolors
+" set termguicolors
 set ttyfast
 set undofile
 set wildmenu
 set wildoptions=pum
+
+if (has("termguicolors"))
+    set termguicolors
+endif
 
 syntax enable
 " set t_Co=256
@@ -40,10 +44,10 @@ colorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
-let &t_SI.="\e[1 q"
-let &t_SR.="\e[1 q"
-let &t_EI.="\e[1 q"
-let &t_vi.="\e[1 q"
+" let &t_SI.="\e[1 q"
+" let &t_SR.="\e[1 q"
+" let &t_EI.="\e[1 q"
+" let &t_vi.="\e[1 q"
 
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
@@ -56,24 +60,24 @@ noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
 noremap <silent> <leader><esc> :noh<cr>
 
-tnoremap <silent> <s-up> <c-w>k
-tnoremap <silent> <s-right> <c-w>l
-tnoremap <silent> <s-down> <c-w>j
-tnoremap <silent> <s-left> <c-w>h
+" tnoremap <silent> <s-up> <c-w>k
+" tnoremap <silent> <s-right> <c-w>l
+" tnoremap <silent> <s-down> <c-w>j
+" tnoremap <silent> <s-left> <c-w>h
 
-inoremap <silent> <s-up> <c-w>k
-inoremap <silent> <s-right> <c-w>l
-inoremap <silent> <s-down> <c-w>j
-inoremap <silent> <s-left> <c-w>h
+" inoremap <silent> <s-up> <c-w>k
+" inoremap <silent> <s-right> <c-w>l
+" inoremap <silent> <s-down> <c-w>j
+" inoremap <silent> <s-left> <c-w>h
 
-noremap <silent> <s-up> <c-w>k
-noremap <silent> <s-right> <c-w>l
-noremap <silent> <s-down> <c-w>j
-noremap <silent> <s-left> <c-w>h
+" noremap <silent> <s-up> <c-w>k
+" noremap <silent> <s-right> <c-w>l
+" noremap <silent> <s-down> <c-w>j
+" noremap <silent> <s-left> <c-w>h
 
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+" autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+" autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
+" autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -97,21 +101,21 @@ let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
-let g:airline#extensions#lsp#enabled = 1
+" let g:airline#extensions#lsp#enabled = 1
 
-let g:cpp_function_highlight = 1
-let g:cpp_attributes_highlight = 1
-let g:cpp_member_highlight = 1
-let g:cpp_simple_highlight = 1
+" let g:cpp_function_highlight = 1
+" let g:cpp_attributes_highlight = 1
+" let g:cpp_member_highlight = 1
+" let g:cpp_simple_highlight = 1
 
-let g:lsp_use_native_client = 1
-let g:lsp_semantic_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_diagnostics_float_cursor = 1
-let g:lsp_diagnostics_float_insert_mode_enabled = 1
-let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
-let g:lsp_inlay_hints_enabled = 1
-let g:lsp_async_completion = 1
+" let g:lsp_use_native_client = 1
+" let g:lsp_semantic_enabled = 1
+" let g:lsp_diagnostics_echo_cursor = 1
+" let g:lsp_diagnostics_float_cursor = 1
+" let g:lsp_diagnostics_float_insert_mode_enabled = 1
+" let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
+" let g:lsp_inlay_hints_enabled = 1
+" let g:lsp_async_completion = 1
 
 " if executable('clangd')
    " augroup lsp_clangd
