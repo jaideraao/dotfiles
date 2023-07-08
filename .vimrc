@@ -11,6 +11,9 @@ set clipboard=unnamed
 set cursorline
 set encoding=utf-8
 set expandtab
+set fileformat=unix
+set foldlevel=99
+set foldmethod=indent
 set fsync
 set hlsearch
 set ignorecase
@@ -21,8 +24,12 @@ set ruler
 set shiftwidth=4
 set showmatch
 set smarttab
+set softtabstop=4
+set splitbelow
+set splitright
 set tabstop=4
 " set termguicolors
+set textwidth=79
 set ttyfast
 set undofile
 set wildmenu
@@ -118,16 +125,16 @@ let g:NERDToggleCheckAllLines = 1
 " let g:lsp_async_completion = 1
 
 " if executable('clangd')
-   " augroup lsp_clangd
-       " autocmd!
-       " autocmd User lsp_setup call lsp#register_server({
-           " \ 'name': 'clangd',
-           " \ 'cmd': {server_info->['clangd', '-background-index']},
-           " \ 'whitelist': ['c', 'cpp'],
-           " \ })
-       " autocmd FileType c,cpp setlocal omnifunc=lsp#complete
-       " autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
-   " augroup end
+" augroup lsp_clangd
+" autocmd!
+" autocmd User lsp_setup call lsp#register_server({
+" \ 'name': 'clangd',
+" \ 'cmd': {server_info->['clangd', '-background-index']},
+" \ 'whitelist': ['c', 'cpp'],
+" \ })
+" autocmd FileType c,cpp setlocal omnifunc=lsp#complete
+" autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
+" augroup end
 " endif
 
 function! WindowNumber_active(...)
