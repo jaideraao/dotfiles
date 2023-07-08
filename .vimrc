@@ -1,7 +1,7 @@
 let mapleader="\<space>"
 
-packadd termdebug
-let g:termdebugger = "arm-none-eabi-gdb"
+" packadd termdebug
+" let g:termdebugger = "arm-none-eabi-gdb"
 
 set autoindent
 set autoread
@@ -22,18 +22,21 @@ set shiftwidth=4
 set showmatch
 set smarttab
 set tabstop=4
-set termguicolors
+" set termguicolors
 set ttyfast
 set undofile
 set wildmenu
 set wildoptions=pum
 
 syntax enable
-" set t_Co=256
+set t_Co=256
 " set t_ut=
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_termcolors = 256
 let g:onedark_terminal_italics = 1
+let g:airline_theme='onedark'
 set background=dark
-" colorscheme onedark
+colorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
