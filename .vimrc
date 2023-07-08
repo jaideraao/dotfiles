@@ -33,7 +33,7 @@ syntax enable
 " set t_ut=
 let g:onedark_terminal_italics = 1
 set background=dark
-" clorscheme onedark
+" colorscheme onedark
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
