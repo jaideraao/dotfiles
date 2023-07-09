@@ -1,14 +1,14 @@
-let mapleader="\<space>"
+et mapleader="\<space>"
 
 " packadd termdebug
-" let g:termdebugger = "arm-none-eabi-gdb"
+" let g:termdebugger="arm-none-eabi-gdb"
 
 set autoindent
 set autoread
 set autowrite
 set belloff=all
 set clipboard=unnamed
-set cursorline
+" set cursorline
 set encoding=utf-8
 set expandtab
 set fileformat=unix
@@ -28,20 +28,19 @@ set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
-set termguicolors
+" set termguicolors
 set textwidth=79
 set ttyfast
 set wildmenu
 set wildoptions=pum
 
 syntax enable
-" set t_Co=256
-" set t_ut=
-let g:onedark_hide_endofbuffer = 1
-" let g:onedark_termcolors = 256
-let g:onedark_terminal_italics = 1
+let g:solarized_visibility="low"
 set background=dark
-colorscheme onedark
+colorscheme solarized 
+
+highlight Comment cterm=italic
+
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
@@ -60,19 +59,19 @@ noremap <silent> <leader><esc> :noh<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
-" let g:NERDCreateDefaultMappings = 1
-let g:NERDSpaceDelims = 1
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDToggleCheckAllLines = 1
+" let g:NERDCreateDefaultMappings=1
+let g:NERDSpaceDelims=1
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDToggleCheckAllLines=1
 
-" let g:lsp_use_native_client = 1
-" let g:lsp_semantic_enabled = 1
-" let g:lsp_diagnostics_echo_cursor = 1
-" let g:lsp_diagnostics_float_cursor = 1
-" let g:lsp_diagnostics_float_insert_mode_enabled = 1
-" let g:lsp_diagnostics_highlights_insert_mode_enabled = 1
-" let g:lsp_inlay_hints_enabled = 1
-" let g:lsp_async_completion = 1
+" let g:lsp_use_native_client=1
+" let g:lsp_semantic_enabled=1
+" let g:lsp_diagnostics_echo_cursor=1
+" let g:lsp_diagnostics_float_cursor=1
+" let g:lsp_diagnostics_float_insert_mode_enabled=1
+" let g:lsp_diagnostics_highlights_insert_mode_enabled=1
+" let g:lsp_inlay_hints_enabled=1
+" let g:lsp_async_completion=1
 
 " if executable('clangd')
 " augroup lsp_clangd
