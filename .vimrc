@@ -1,4 +1,4 @@
-et mapleader="\<space>"
+let mapleader="\<space>"
 
 " packadd termdebug
 " let g:termdebugger="arm-none-eabi-gdb"
@@ -35,7 +35,6 @@ set wildmenu
 set wildoptions=pum
 
 syntax enable
-let g:solarized_visibility="low"
 set background=dark
 colorscheme solarized 
 
