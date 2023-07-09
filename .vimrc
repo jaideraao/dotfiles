@@ -39,6 +39,7 @@ set background=dark
 colorscheme solarized 
 
 highlight Comment cterm=italic
+highlight EndOfBuffer ctermfg=bg
 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
