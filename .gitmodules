@@ -7,6 +7,3 @@
 [submodule ".vim/pack/dist/start/vim-lsp"]
 	path = .vim/pack/plugins/start/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
-[submodule ".vim/pack/dist/start/vim-polyglot"]
-	path = .vim/pack/plugins/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
