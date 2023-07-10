@@ -10,3 +10,6 @@
 [submodule ".vim/pack/plugins/start/ansible-vim"]
 	path = .vim/pack/plugins/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
+[submodule ".vim/pack/plugins/start/vim-cpp-modern"]
+	path = .vim/pack/plugins/start/vim-cpp-modern
+	url = https://github.com/bfrg/vim-cpp-modern.git
