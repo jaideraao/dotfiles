@@ -1,6 +1,12 @@
 [submodule ".vim/pack/dist/start/nerdcommenter"]
-	path = .vim/pack/dist/start/nerdcommenter
+	path = .vim/pack/plugins/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
 [submodule ".vim/pack/dist/start/vim-colors-solarized"]
-	path = .vim/pack/dist/start/vim-colors-solarized
+	path = .vim/pack/plugins/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/pack/dist/start/vim-lsp"]
+	path = .vim/pack/plugins/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule ".vim/pack/dist/start/vim-polyglot"]
+	path = .vim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
