@@ -21,6 +21,7 @@ set incsearch
 set laststatus=0
 set linebreak
 set nocompatible
+set noshowmode
 set number
 set shiftwidth=4
 set showmatch
@@ -117,20 +118,3 @@ augroup ansible_vim_fthosts
 augroup END
 
 " set foldmethod=expr foldexpr=lsp#ui#vim#folding#foldexpr() foldtext=lsp#ui#vim#folding#foldtext()
-
-" function! WindowNumber_active(...)
-    " let builder = a:1
-    " let context = a:2
-    " call builder.add_section('airline_b', ' %{tabpagewinnr(tabpagenr())} ')
-    " return 0
-" endfunction
-
-" function! WindowNumber_inactive(...)
-    " let builder = a:1
-    " let context = a:2
-    " call builder.add_section('airline_a', ' %{tabpagewinnr(tabpagenr())} ')
-    " return 0
-" endfunction
-
-" call airline#add_statusline_func('WindowNumber_active')
-" call airline#add_inactive_statusline_func('WindowNumber_inactive')
