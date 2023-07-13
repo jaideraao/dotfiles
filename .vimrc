@@ -57,6 +57,14 @@ noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
 noremap <silent> <leader><space> :noh<cr>
 
+noremap <silent> <leader>+ <c-w><c-v>
+noremap <silent> <leader>- <c-w><c-s>
+
+noremap <silent> <leader><left> <c-w><c-h>
+noremap <silent> <leader><down> <c-w><c-j>
+noremap <silent> <leader><up> <c-w><c-k>
+noremap <silent> <leader><right> <c-w><c-l>
+
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
@@ -90,14 +98,14 @@ let g:lsp_diagnostics_enabled=0
 " let g:lsp_inlay_hints_enabled=1
 let g:lsp_async_completion=1
 
-" if executable('clangd')
-    " augroup lsp_clangd
-        " autocmd!
-        " autocmd User lsp_setup call lsp#register_server({'name': 'clangd', 'cmd': {server_info->['clangd', '-background-index']}, 'whitelist': ['c', 'cpp']})
-        " autocmd FileType c,cpp setlocal omnifunc=lsp#complete
-        " autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
-    " augroup end
-" endif
+if executable('clangd')
+    augroup lsp_clangd
+        autocmd!
+        autocmd User lsp_setup call lsp#register_server({'name': 'clangd', 'cmd': {server_info->['clangd', '-background-index']}, 'whitelist': ['c', 'cpp']})
+        autocmd FileType c,cpp setlocal omnifunc=lsp#complete
+        autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
+    augroup end
+endif
 
 " if executable('sourcekit-lsp')
     " augroup sourcekit_lsp
