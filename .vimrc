@@ -11,6 +11,7 @@ set clipboard=unnamed
 set encoding=utf-8
 set expandtab
 set fileformat=unix
+set fillchars+=eob:\ ,vert:\|
 set foldlevel=99
 set foldmethod=indent
 set fsync
@@ -18,26 +19,28 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=0
+set linebreak
 set nocompatible
 set number
 set shiftwidth=4
 set showmatch
+set smartindent
 set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
-set textwidth=79
 set ttyfast
 set wildmenu
 set wildoptions=pum
+set wrap
 
 syntax enable
 set background=dark
-colorscheme solarized 
+colorscheme solarized
 
 highlight Comment cterm=italic
-highlight EndOfBuffer ctermfg=bg
+highlight VertSplit ctermbg=bg
 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
@@ -51,16 +54,25 @@ noremap <silent> <leader>a :%bd!<cr>
 noremap <silent> <leader>. :pwd<cr>
 noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
-noremap <silent> <leader><esc> :noh<cr>
+noremap <silent> <leader><space> :noh<cr>
 
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
+let g:airline_powerline_fonts=1
+
 " let g:NERDCreateDefaultMappings=1
 let g:NERDSpaceDelims=1
 let g:NERDTrimTrailingWhitespace=1
 let g:NERDToggleCheckAllLines=1
+
+let g:ansible_name_highlight='b'
+let g:ansible_extra_keywords_highlight=1
+
+let g:cpp_attributes_highlight=1
+let g:cpp_member_highlight=1
+let g:cpp_simple_highlight=1
 
 let g:lsp_use_native_client=1
 let g:lsp_semantic_enabled=1
@@ -73,21 +85,10 @@ let g:lsp_diagnostics_enabled=0
 " let g:lsp_inlay_hints_enabled=1
 let g:lsp_async_completion=1
 
-let g:ansible_name_highlight='b'
-let g:ansible_extra_keywords_highlight=1
-
-let g:cpp_attributes_highlight=1
-let g:cpp_member_highlight=1
-let g:cpp_simple_highlight=1
-
 " if executable('clangd')
     " augroup lsp_clangd
         " autocmd!
-        " autocmd User lsp_setup call lsp#register_server({
-                    " \ 'name': 'clangd',
-                    " \ 'cmd': {server_info->['clangd', '-background-index']},
-                    " \ 'whitelist': ['c', 'cpp'],
-                    " \ })
+        " autocmd User lsp_setup call lsp#register_server({'name': 'clangd', 'cmd': {server_info->['clangd', '-background-index']}, 'whitelist': ['c', 'cpp']})
         " autocmd FileType c,cpp setlocal omnifunc=lsp#complete
         " autocmd FileType c,cpp setlocal tagfunc=lsp#tagfunc
     " augroup end
@@ -96,17 +97,14 @@ let g:cpp_simple_highlight=1
 " if executable('sourcekit-lsp')
     " augroup sourcekit_lsp
         " autocmd!
-        " autocmd User lsp_setup call lsp#register_server({
-                    " \ 'name': 'sourcekit-lsp',
-                    " \ 'cmd': {server_info->['sourcekit-lsp']},
-                    " \ 'whitelist': ['swift'],
-                    " \ })
+        " autocmd User lsp_setup call lsp#register_server({'name': 'sourcekit-lsp', 'cmd': {server_info->['sourcekit-lsp']}, 'whitelist': ['swift']})
         " autocmd FileType swift setlocal omnifunc=lsp#complete
         " autocmd FileType swift setlocal tagfunc=lsp#tagfunc
     " augroup end
 " endif
 
 autocmd BufRead,BufNewFile *.yml,*.yaml set filetype=yaml.ansible
+autocmd FileType *.yml,*.yaml setlocal expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
 autocmd BufRead,BufNewFile *.swift set filetype=swift
 
 augroup ansible_vim_fthosts
@@ -114,6 +112,4 @@ augroup ansible_vim_fthosts
     autocmd BufNewFile,BufRead hosts setfiletype yaml.ansible
 augroup END
 
-" set foldmethod=expr
-            " \ foldexpr=lsp#ui#vim#folding#foldexpr()
-            " \ foldtext=lsp#ui#vim#folding#foldtext()
+" set foldmethod=expr foldexpr=lsp#ui#vim#folding#foldexpr() foldtext=lsp#ui#vim#folding#foldtext()
