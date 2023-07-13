@@ -61,6 +61,10 @@ noremap <silent> <leader><space> :noh<cr>
 " autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline#extensions#tabline#buffer_idx_mode=1
+let g:airline#extensions#lsp#enabled=1
 
 " let g:NERDCreateDefaultMappings=1
 let g:NERDSpaceDelims=1
@@ -113,3 +117,20 @@ augroup ansible_vim_fthosts
 augroup END
 
 " set foldmethod=expr foldexpr=lsp#ui#vim#folding#foldexpr() foldtext=lsp#ui#vim#folding#foldtext()
+
+" function! WindowNumber_active(...)
+    " let builder = a:1
+    " let context = a:2
+    " call builder.add_section('airline_b', ' %{tabpagewinnr(tabpagenr())} ')
+    " return 0
+" endfunction
+
+" function! WindowNumber_inactive(...)
+    " let builder = a:1
+    " let context = a:2
+    " call builder.add_section('airline_a', ' %{tabpagewinnr(tabpagenr())} ')
+    " return 0
+" endfunction
+
+" call airline#add_statusline_func('WindowNumber_active')
+" call airline#add_inactive_statusline_func('WindowNumber_inactive')
