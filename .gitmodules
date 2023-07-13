@@ -13,3 +13,12 @@
 [submodule ".vim/pack/plugins/start/vim-cpp-modern"]
 	path = .vim/pack/plugins/start/vim-cpp-modern
 	url = https://github.com/bfrg/vim-cpp-modern.git
+[submodule ".vim/pack/plugins/start/vim-multiple-cursors"]
+	path = .vim/pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule ".vim/pack/plugins/start/vim-airline"]
+	path = .vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/plugins/start/vim-airline-themes"]
+	path = .vim/pack/plugins/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
