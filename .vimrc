@@ -49,7 +49,7 @@ noremap <silent> <leader>e :e!<cr>
 noremap <silent> <leader>x :x!<cr>
 noremap <silent> <leader>d :bd!<cr>
 noremap <silent> <leader>a :%bd!<cr>
-noremap <silent> <leader>o :Lexplore<cr>
+noremap <silent> <leader>o :Explore<cr>
 noremap <silent> <leader>. :pwd<cr>
 noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
