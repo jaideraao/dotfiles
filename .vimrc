@@ -79,6 +79,8 @@ let g:NERDToggleCheckAllLines=1
 let g:ansible_name_highlight='b'
 let g:ansible_extra_keywords_highlight=1
 
+let g:markdown_fenced_languages = ['git', 'vim', 'ansible', 'c']
+
 autocmd BufRead,BufNewFile *.yml,*.yaml set filetype=yaml.ansible
 autocmd FileType *.yml,*.yaml setlocal expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
 
