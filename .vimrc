@@ -26,7 +26,7 @@ set showmatch
 set smartindent
 set smarttab
 set softtabstop=4
-set spell spelllang=es
+" set spell spelllang=es
 set splitbelow
 set splitright
 set tabstop=4
@@ -83,6 +83,7 @@ let g:ansible_extra_keywords_highlight=1
 
 let g:markdown_fenced_languages = ['git', 'vim', 'ansible', 'c']
 
+autocmd FileType markdown setlocal spell spelllang=es
 autocmd BufRead,BufNewFile *.yml,*.yaml set filetype=yaml.ansible
 autocmd FileType *.yml,*.yaml setlocal expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
 
