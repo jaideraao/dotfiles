@@ -5,6 +5,7 @@ set autoread
 set autowrite
 set belloff=all
 set clipboard=unnamed
+set dictionary+=/usr/share/dict/words
 set encoding=utf-8
 set expandtab
 set fileformat=unix
@@ -25,6 +26,7 @@ set showmatch
 set smartindent
 set smarttab
 set softtabstop=4
+set spell spelllang=es
 set splitbelow
 set splitright
 set tabstop=4
