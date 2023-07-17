@@ -81,7 +81,8 @@ let g:NERDToggleCheckAllLines=1
 let g:ansible_name_highlight='b'
 let g:ansible_extra_keywords_highlight=1
 
-let g:markdown_fenced_languages = ['git', 'vim', 'ansible', 'c']
+let g:markdown_folding=1
+let g:markdown_fenced_languages = ['git', 'vim', 'ansible']
 
 autocmd FileType markdown setlocal spell spelllang=es
 autocmd BufRead,BufNewFile *.yml,*.yaml set filetype=yaml.ansible
