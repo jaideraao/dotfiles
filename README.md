@@ -2,7 +2,7 @@
 
 Administrar mis **dotfiles** como un repositorio git.
 
-- El archivo `.gitignore`, contiene esto: `*`, git ignorará todos los archivos del directorio **`$HOME`**.
+- El archivo `.gitignore`, contiene esto: --`*`--, git ignorará todos los archivos del directorio --`$HOME`--.
 
 - Para rastrear cualquier archivo, es necesario anular el archivo `.gitignore` caso por caso con `git add -f`.
 
