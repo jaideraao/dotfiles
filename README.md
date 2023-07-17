@@ -1,7 +1,5 @@
 # dotfiles
 
-## dotfiles
-
 Administrar mis **dotfiles** como un repositorio git.
 
 - El archivo `.gitignore`, contiene esto: `*`, git ignorará todos los archivos del directorio `$HOME`.
