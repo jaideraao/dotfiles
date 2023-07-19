@@ -1,4 +1,5 @@
 alias ls="ls -aho"
+alias tree="tree -aL 1"
 
 export COLORTERM=truecolor
 export CLICOLOR=1
