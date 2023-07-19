@@ -51,28 +51,12 @@ noremap <silent> <leader>e :e!<cr>
 noremap <silent> <leader>x :x!<cr>
 noremap <silent> <leader>d :bd!<cr>
 noremap <silent> <leader>a :%bd!<cr>
+noremap <silent> <leader>l :ls<cr>
 noremap <silent> <leader>o :Explore<cr>
 noremap <silent> <leader>. :pwd<cr>
 noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
 noremap <silent> <leader><space> :noh<cr>
-
-noremap <leader>1 <Plug>AirlineSelectTab1
-noremap <leader>2 <Plug>AirlineSelectTab2
-noremap <leader>3 <Plug>AirlineSelectTab3
-noremap <leader>4 <Plug>AirlineSelectTab4
-noremap <leader>5 <Plug>AirlineSelectTab5
-noremap <leader>6 <Plug>AirlineSelectTab6
-noremap <leader>7 <Plug>AirlineSelectTab7
-noremap <leader>8 <Plug>AirlineSelectTab8
-noremap <leader>9 <Plug>AirlineSelectTab9
-noremap <leader>0 <Plug>AirlineSelectTab0
-
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline#extensions#tabline#buffer_idx_mode=1
-let g:airline#extensions#lsp#enabled=1
 
 let g:NERDSpaceDelims=1
 let g:NERDTrimTrailingWhitespace=1
