@@ -16,4 +16,4 @@ compinit
 autoload bashcompinit && bashcompinit
 source $(brew --prefix)/etc/bash_completion.d/az
 
-PS1="%F{red}/>%f "
+PS1="%F{blue}/>%f "
