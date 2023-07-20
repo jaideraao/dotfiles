@@ -3,6 +3,7 @@ let mapleader="\<space>"
 set autoindent
 set autoread
 set autowrite
+set autowriteall
 set belloff=all
 set clipboard=unnamed
 set dictionary+=/usr/share/dict/words
@@ -19,16 +20,17 @@ set incsearch
 set laststatus=0
 set linebreak
 set nocompatible
-set noshowmode
 set number
+set ruler
+" set rulerformat=%=%=\ %LL\ --%p%%--
 set shiftwidth=4
 set showmatch
 set smartindent
 set smarttab
 set softtabstop=4
-" set spell spelllang=es
 set splitbelow
 set splitright
+set statusline=%f%m
 set tabstop=4
 set ttyfast
 set wildmenu
