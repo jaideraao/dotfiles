@@ -105,7 +105,7 @@ let g:markdown_fenced_languages=['git', 'vim', 'swift', 'ansible']
 
 let g:lsp_use_native_client=1
 let g:lsp_semantic_enabled=1
-let g:lsp_diagnostics_enabled=0
+let g:lsp_diagnostics_enabled=1
 let g:lsp_diagnostics_echo_cursor=1
 let g:lsp_diagnostics_float_cursor=1
 let g:lsp_diagnostics_float_insert_mode_enabled=1
