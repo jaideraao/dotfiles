@@ -1,9 +1,6 @@
 [submodule ".vim/pack/dist/start/nerdcommenter"]
 	path = .vim/pack/plugins/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
-[submodule ".vim/pack/dist/start/vim-colors-solarized"]
-	path = .vim/pack/plugins/start/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/pack/plugins/start/ansible-vim"]
 	path = .vim/pack/plugins/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
@@ -34,3 +31,9 @@
 [submodule ".vim/pack/plugins/start/vim-terraform"]
 	path = .vim/pack/plugins/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule ".vim/pack/plugins/start/onedark.vim"]
+	path = .vim/pack/plugins/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
+[submodule ".vim/pack/plugins/start/vim-colors-solarized"]
+	path = .vim/pack/plugins/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
