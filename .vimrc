@@ -32,6 +32,7 @@ set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
+set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -39,7 +40,7 @@ set wrap
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 highlight Comment cterm=italic
 highlight VertSplit ctermbg=bg
