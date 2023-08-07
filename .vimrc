@@ -1,7 +1,7 @@
 let mapleader="\<space>"
 
 packadd termdebug
-let g:termdebugger="lldb"
+let g:termdebugger="arm-none-eabi-gdb"
 
 set autoindent
 set autoread
@@ -9,6 +9,7 @@ set autowrite
 set autowriteall
 set belloff=all
 set clipboard=unnamed
+set cursorline
 set dictionary+=/usr/share/dict/words
 set encoding=utf-8
 set expandtab
@@ -23,16 +24,17 @@ set incsearch
 set laststatus=0
 set linebreak
 set nocompatible
+set noswapfile
 set number
 set shiftwidth=4
 set showmatch
+set signcolumn=no
 set smartindent
 set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
-set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -40,7 +42,7 @@ set wrap
 
 syntax enable
 set background=dark
-colorscheme onedark
+colorscheme solarized
 
 highlight Comment cterm=italic
 highlight VertSplit ctermbg=bg
@@ -79,9 +81,9 @@ noremap <leader>0 <plug>airlineselecttab0
 " nnoremap rn :easycompleterename<cr>
 " nnoremap gb :backtooriginalbuffer<cr>
 
-" autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-" autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-" autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
+autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
@@ -102,18 +104,23 @@ let g:ansible_name_highlight='b'
 let g:ansible_extra_keywords_highlight=1
 
 let g:markdown_folding=1
-let g:markdown_fenced_languages=['git', 'vim', 'swift', 'ansible']
+let g:markdown_fenced_languages=['c', 'cpp', 'git', 'vim', 'swift', 'ansible']
 
-let g:lsp_use_native_client=1
-let g:lsp_semantic_enabled=1
+let g:lsp_async_completion=1
+let g:lsp_diagnostics_echo_cursor=0
 let g:lsp_diagnostics_enabled=1
-let g:lsp_diagnostics_echo_cursor=1
 let g:lsp_diagnostics_float_cursor=1
 let g:lsp_diagnostics_float_insert_mode_enabled=1
 let g:lsp_diagnostics_highlights_insert_mode_enabled=1
+let g:lsp_documentation_float_docked=1
 let g:lsp_inlay_hints_enabled=1
-let g:lsp_async_completion=1
+let g:lsp_preview_float=1
+let g:lsp_semantic_enabled=1
+let g:lsp_use_native_client=1
 
+" autocmd BufWritePre <buffer> LspDocumentFormatSync
+
+" autocmd! BufWritePre *.c,cpp,h,make <buffer> LspDocumentFormatSync
 autocmd filetype yml,yaml setlocal filetype=yaml.ansible expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
 autocmd filetype hosts setlocal filetype=yaml.ansible
 autocmd filetype markdown setlocal spell spelllang=es
