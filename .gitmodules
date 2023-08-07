@@ -19,18 +19,9 @@
 [submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
 	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
-[submodule ".vim/pack/plugins/start/vim-airline"]
-	path = .vim/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/plugins/start/vim-airline-themes"]
-	path = .vim/pack/plugins/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule ".vim/pack/plugins/start/indentLine"]
 	path = .vim/pack/plugins/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule ".vim/pack/plugins/start/vim-terraform"]
-	path = .vim/pack/plugins/start/vim-terraform
-	url = https://github.com/hashivim/vim-terraform.git
 [submodule ".vim/pack/plugins/start/onedark.vim"]
 	path = .vim/pack/plugins/start/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git

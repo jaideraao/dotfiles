@@ -85,20 +85,20 @@ autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
 autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline#extensions#tabline#buffer_idx_mode=1
-let g:airline#extensions#lsp#enabled=1
+" let g:airline_powerline_fonts=1
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#formatter='unique_tail'
+" let g:airline#extensions#tabline#buffer_idx_mode=1
+" let g:airline#extensions#lsp#enabled=1
 
 let g:NERDSpaceDelims=1
 let g:NERDTrimTrailingWhitespace=1
 let g:NERDToggleCheckAllLines=1
 
-let g:cpp_function_highlight=1
-let g:cpp_attributes_highlight=1
-let g:cpp_member_highlight=1
-let g:cpp_simple_highlight=1
+" let g:cpp_function_highlight=1
+" let g:cpp_attributes_highlight=1
+" let g:cpp_member_highlight=1
+" let g:cpp_simple_highlight=1
 
 let g:ansible_name_highlight='b'
 let g:ansible_extra_keywords_highlight=1
@@ -115,7 +115,7 @@ let g:lsp_diagnostics_highlights_insert_mode_enabled=1
 let g:lsp_documentation_float_docked=1
 let g:lsp_inlay_hints_enabled=1
 let g:lsp_preview_float=1
-let g:lsp_semantic_enabled=1
+" let g:lsp_semantic_enabled=1
 let g:lsp_use_native_client=1
 
 " autocmd BufWritePre <buffer> LspDocumentFormatSync
