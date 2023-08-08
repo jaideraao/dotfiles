@@ -1,7 +1,7 @@
 let mapleader="\<space>"
 
-packadd termdebug
-let g:termdebugger="arm-none-eabi-gdb"
+" packadd termdebug
+" let g:termdebugger="arm-none-eabi-gdb"
 
 set autoindent
 set autoread
@@ -10,6 +10,7 @@ set autowriteall
 set belloff=all
 set clipboard=unnamed
 set cursorline
+set cursorlineopt=both
 set dictionary+=/usr/share/dict/words
 set encoding=utf-8
 set expandtab
@@ -34,6 +35,7 @@ set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
+set t_Co=256
 set tabstop=4
 set ttyfast
 set wildmenu
@@ -41,14 +43,16 @@ set wildoptions=pum
 set wrap
 
 syntax enable
+filetype plugin indent on
+set omnifunc=syntaxcomplete#complete
+
 set background=dark
 colorscheme solarized
 
 highlight Comment cterm=italic
+highlight CursorLineNr cterm=bold ctermfg=gray
+highlight LineNr ctermbg=bg
 highlight VertSplit ctermbg=bg
-
-filetype plugin indent on
-set omnifunc=syntaxcomplete#complete
 
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
@@ -81,10 +85,6 @@ noremap <leader>0 <plug>airlineselecttab0
 " nnoremap rn :easycompleterename<cr>
 " nnoremap gb :backtooriginalbuffer<cr>
 
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
-
 " let g:airline_powerline_fonts=1
 " let g:airline#extensions#tabline#enabled=1
 " let g:airline#extensions#tabline#formatter='unique_tail'
@@ -113,9 +113,22 @@ let g:lsp_preview_float=1
 let g:lsp_semantic_enabled=1
 let g:lsp_use_native_client=1
 
-" autocmd BufWritePre <buffer> LspDocumentFormatSync
+augroup lenguaje_C
+    autocmd!
+    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
+    autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+    autocmd filetype c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
+    autocmd filetype c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+    autocmd filetype c,cpp,h,make packadd termdebug
+    autocmd filetype c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
+augroup end
 
-" autocmd! BufWritePre *.c,cpp,h,make <buffer> LspDocumentFormatSync
-autocmd filetype yml,yaml setlocal filetype=yaml.ansible expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
-autocmd filetype hosts setlocal filetype=yaml.ansible
-autocmd filetype markdown setlocal spell spelllang=es
+augroup filetype_yaml
+    autocmd!
+    autocmd filetype yml,yaml setlocal filetype=yaml.ansible expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
+    autocmd filetype hosts setlocal filetype=yaml.ansible
+augroup end
+
+augroup filetype_markdown
+    autocmd filetype markdown setlocal spell spelllang=es
+augroup end

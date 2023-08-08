@@ -1,18 +1,17 @@
 alias ls="ls -Aho"
 
-export COLORTERM=truecolor
 export CLICOLOR=1
-export GREP_OPTIONS="--color=auto"
+export COLORTERM=truecolor
 export TERM=xterm-256color-italic
 export MANPAGER="vim +MANPAGER --not-a-term -"
+export GREP_OPTIONS="--color=auto"
 
-# fpath=(~/.zsh/completion $fpath)
-# fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+# Set PATH, MANPATH, etc., for Arm GNU Toolchain.
+export PATH="$HOME/.local/bin:$PATH"
+
+# fpath=(~/.zsh/site-functions $fpath)
 
 autoload -Uz compinit
 compinit
-
-# autoload bashcompinit && bashcompinit
-# source $(brew --prefix)/etc/bash_completion.d/az
 
 PS1="%F{blue}%1d/>%f "
