@@ -1,7 +1,7 @@
 let mapleader="\<space>"
 
-" packadd termdebug
-" let g:termdebugger="arm-none-eabi-gdb"
+packadd termdebug
+let g:termdebugger="arm-none-eabi-gdb"
 
 set autoindent
 set autoread
