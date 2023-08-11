@@ -10,7 +10,7 @@ set autowriteall
 set belloff=all
 set clipboard=unnamed
 set cursorline
-set cursorlineopt=both
+set cursorlineopt=number
 set dictionary+=/usr/share/dict/words
 set encoding=utf-8
 set expandtab
@@ -51,8 +51,9 @@ colorscheme solarized
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=gray
-highlight LineNr ctermbg=bg
-highlight VertSplit ctermbg=bg
+highlight LineNr ctermbg=none
+highlight MatchParen cterm=bold,underline ctermbg=none
+highlight VertSplit ctermbg=none
 
 noremap <silent> <leader>w :up!<cr>
 noremap <silent> <leader>q :q!<cr>
@@ -67,16 +68,16 @@ noremap <silent> <tab> :bn<cr>
 noremap <silent> <s-tab> :bp<cr>
 noremap <silent> <leader><space> :noh<cr>
 
-noremap <leader>1 <plug>airlineselecttab1
-noremap <leader>2 <plug>airlineselecttab2
-noremap <leader>3 <plug>airlineselecttab3
-noremap <leader>4 <plug>airlineselecttab4
-noremap <leader>5 <plug>airlineselecttab5
-noremap <leader>6 <plug>airlineselecttab6
-noremap <leader>7 <plug>airlineselecttab7
-noremap <leader>8 <plug>airlineselecttab8
-noremap <leader>9 <plug>airlineselecttab9
-noremap <leader>0 <plug>airlineselecttab0
+" noremap <leader>1 <plug>airlineselecttab1
+" noremap <leader>2 <plug>airlineselecttab2
+" noremap <leader>3 <plug>airlineselecttab3
+" noremap <leader>4 <plug>airlineselecttab4
+" noremap <leader>5 <plug>airlineselecttab5
+" noremap <leader>6 <plug>airlineselecttab6
+" noremap <leader>7 <plug>airlineselecttab7
+" noremap <leader>8 <plug>airlineselecttab8
+" noremap <leader>9 <plug>airlineselecttab9
+" noremap <leader>0 <plug>airlineselecttab0
 " noremap <tab> <plug>airlineselectprevtab
 " noremap <s-tab> <plug>airlineselectnexttab
 
@@ -113,7 +114,7 @@ let g:lsp_preview_float=1
 let g:lsp_semantic_enabled=1
 let g:lsp_use_native_client=1
 
-augroup lenguaje_C
+augroup lenguaje_c
     autocmd!
     autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
     autocmd filetype c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
@@ -123,12 +124,12 @@ augroup lenguaje_C
     autocmd filetype c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
 augroup end
 
-augroup filetype_yaml
+augroup filetype_yml
     autocmd!
     autocmd filetype yml,yaml setlocal filetype=yaml.ansible expandtab tabstop=2 ai shiftwidth=2 nu softtabstop=0
     autocmd filetype hosts setlocal filetype=yaml.ansible
 augroup end
 
-augroup filetype_markdown
+augroup filetype_md
     autocmd filetype markdown setlocal spell spelllang=es
 augroup end
