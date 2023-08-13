@@ -14,4 +14,5 @@ export PATH="$HOME/.local/bin:$PATH"
 autoload -Uz compinit
 compinit
 
-PS1="%F{blue}%1d/>%f "
+# PS1="%F{blue}%1d/>%f "
+[ -f ~/.zsh/promptline.sh ] && source ~/.zsh/promptline.sh
