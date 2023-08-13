@@ -14,5 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 autoload -Uz compinit
 compinit
 
+[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # PS1="%F{blue}%1d/>%f "
 [ -f ~/.zsh/promptline.sh ] && source ~/.zsh/promptline.sh
