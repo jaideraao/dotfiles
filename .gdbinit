@@ -7,6 +7,6 @@ set print array-indexes on
 # set python print-stack full
 
 # tui enable
-target extended-remote /dev/cu.usbmodem7BAE9BAB1
-monitor swdp_scan
-attach 1
+# target extended-remote /dev/cu.usbmodem7BAE9BAB1
+# monitor swdp_scan
+# attach 1
