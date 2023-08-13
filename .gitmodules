@@ -4,9 +4,6 @@
 [submodule ".vim/pack/plugins/start/ansible-vim"]
 	path = .vim/pack/plugins/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
-[submodule ".vim/pack/plugins/start/vim-multiple-cursors"]
-	path = .vim/pack/plugins/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule ".vim/pack/plugins/start/vim-lsp-settings"]
 	path = .vim/pack/plugins/start/vim-lsp-settings
 	url = https://github.com/mattn/vim-lsp-settings.git
@@ -25,15 +22,6 @@
 [submodule ".vim/pack/plugins/start/vim-colors-solarized"]
 	path = .vim/pack/plugins/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/pack/plugins/start/vim-airline"]
-	path = .vim/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/plugins/start/vim-airline-themes"]
-	path = .vim/pack/plugins/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule ".vim/pack/plugins/start/promptline.vim"]
-	path = .vim/pack/plugins/start/promptline.vim
-	url = https://github.com/edkolev/promptline.vim.git
 [submodule ".zsh/zsh-syntax-highlighting"]
 	path = .zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
