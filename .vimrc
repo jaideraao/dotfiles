@@ -1,6 +1,7 @@
 set autoindent
 set autoread
 set autowrite
+set autowriteall
 set belloff=all
 set clipboard=unnamed
 set completeopt=menuone,preview,popup,noinsert
