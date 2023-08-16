@@ -71,28 +71,6 @@ noremap <silent> <leader>wa :qall!<cr>
 noremap <silent> <leader>. :pwd<cr>
 noremap <silent> <leader><space> :noh<cr>
 
-" noremap <leader>1 <plug>airlineselecttab1
-" noremap <leader>2 <plug>airlineselecttab2
-" noremap <leader>3 <plug>airlineselecttab3
-" noremap <leader>4 <plug>airlineselecttab4
-" noremap <leader>5 <plug>airlineselecttab5
-" noremap <leader>6 <plug>airlineselecttab6
-" noremap <leader>7 <plug>airlineselecttab7
-" noremap <leader>8 <plug>airlineselecttab8
-" noremap <leader>9 <plug>airlineselecttab9
-" noremap <leader>0 <plug>airlineselecttab0
-" noremap <tab> <plug>airlineselectprevtab
-" noremap <s-tab> <plug>airlineselectnexttab
-
-" let g:airline_powerline_fonts=1
-" let g:airline#extensions#tabline#enabled=1
-" let g:airline#extensions#tabline#formatter='unique_tail'
-" let g:airline#extensions#tabline#buffer_idx_mode=1
-" let g:airline#extensions#lsp#enabled=1
-
-" let g:SuperTabDefaultCompletionType="<c-x><c-o>"
-" let g:SuperTabContextDefaultCompletionType="context"
-
 let g:NERDSpaceDelims=1
 let g:NERDTrimTrailingWhitespace=1
 let g:NERDToggleCheckAllLines=1
