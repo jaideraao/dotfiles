@@ -1,4 +1,4 @@
-alias ls="ls -Aho"
+alias ls="ls -Aho --color=auto"
 
 export CLICOLOR=1
 export COLORTERM=truecolor
@@ -12,15 +12,12 @@ autoload -Uz compinit
 autoload -Uz vcs_info
 compinit
 
-# zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-# zstyle ':vcs_info:*' formats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-# zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-zstyle ':vcs_info:git:*' formats "%F{blue}%r%f on %F{magenta}$(echo -e "\uE0A0") %b%f"
+zstyle ':vcs_info:git:*' formats "%F{blue}%r%f on %F{magenta} %b%f"
 precmd () { vcs_info }
 setopt prompt_subst
 
 # PS1="%F{blue}%3~ ⟫%f "
-PS1='${vcs_info_msg_0_}
+PS1='%m ${vcs_info_msg_0_} %F{cyan}jobs:%j%f
 %F{yellow}⟫%f '
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
