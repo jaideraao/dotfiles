@@ -25,7 +25,6 @@ set noswapfile
 set number
 set shiftwidth=4
 set showmatch
-set signcolumn=no
 set smartindent
 set smarttab
 set softtabstop=4
