@@ -12,12 +12,9 @@ autoload -Uz compinit
 autoload -Uz vcs_info
 compinit
 
-zstyle ':vcs_info:git:*' formats "%F{blue}%r%f on %F{magenta} %b%f"
 precmd () { vcs_info }
+zstyle ':completion:*' menu select
+zstyle ':vcs_info:git:*' formats "%F{blue}%r%f on %F{magenta} %b%f "
 setopt prompt_subst
 
-# PS1="%F{blue}%3~ ⟫%f "
-PS1='%m ${vcs_info_msg_0_} %F{cyan}jobs:%j%f
-%F{yellow}⟫%f '
-
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+PS1='${vcs_info_msg_0_}%F{yellow}⟫%f '
