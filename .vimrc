@@ -22,6 +22,8 @@ set laststatus=0
 set linebreak
 set nocompatible
 set noswapfile
+set notimeout
+set nottimeout
 set number
 set shiftwidth=4
 set showmatch
@@ -47,7 +49,7 @@ set background=dark
 colorscheme solarized
 
 highlight Comment cterm=italic
-highlight CursorLineNr cterm=bold ctermfg=gray
+highlight CursorLineNr cterm=bold ctermfg=grey
 highlight LineNr ctermbg=none
 highlight MatchParen cterm=bold,underline ctermbg=none
 highlight SignColumn ctermbg=none

@@ -1,4 +1,5 @@
 alias ls="ls -Aho --color=auto"
+alias tree="tree -ahL 1 --dirsfirst"
 
 export CLICOLOR=1
 export COLORTERM=truecolor
@@ -9,12 +10,15 @@ export GREP_OPTIONS="--color=auto"
 # fpath=(~/.zsh/site-functions $fpath)
 
 autoload -Uz compinit
-autoload -Uz vcs_info
 compinit
 
-precmd () { vcs_info }
-zstyle ':completion:*' menu select
-zstyle ':vcs_info:git:*' formats "%F{blue}%r%f on %F{magenta} %b%f "
+autoload -Uz vcs_info
+precmd() { vcs_info }
 setopt prompt_subst
 
-PS1='${vcs_info_msg_0_}%F{yellow}⟫%f '
+zstyle ':completion:*' menu select
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f'
+
+PROMPT='%3~ %B%F{9}/>%f%b '
+RPROMPT='${vcs_info_msg_0_}'
