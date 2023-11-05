@@ -3,7 +3,7 @@ alias tree="tree -ahL 1 --dirsfirst"
 
 export CLICOLOR=1
 export COLORTERM=truecolor
-export TERM=xterm-256color-italic
+# export TERM=xterm-256color-italic
 export MANPAGER="vim +MANPAGER --not-a-term -"
 export GREP_OPTIONS="--color=auto"
 

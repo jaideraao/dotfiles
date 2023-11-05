@@ -32,7 +32,7 @@ set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
-set t_Co=256
+" set t_Co=256
 set tabstop=4
 set term=$TERM
 set ttyfast
