@@ -4,6 +4,7 @@ set autowrite
 set autowriteall
 set belloff=all
 set clipboard=unnamed
+set completefunc=syntaxcomplete#Complete
 set completeopt=menuone,preview,popup,noinsert
 set cursorline
 set cursorlineopt=number
@@ -25,6 +26,7 @@ set noswapfile
 set notimeout
 set nottimeout
 set number
+set omnifunc=syntaxcomplete#complete
 set shiftwidth=4
 set showmatch
 set smartindent
@@ -32,7 +34,7 @@ set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
-" set t_Co=256
+set t_Co=256
 set tabstop=4
 set term=$TERM
 set ttyfast
@@ -40,10 +42,8 @@ set wildmenu
 set wildoptions=pum
 set wrap
 
-syntax enable
 filetype plugin indent on
-set omnifunc=syntaxcomplete#complete
-set completefunc=syntaxcomplete#Complete
+syntax enable
 
 set background=dark
 colorscheme solarized
@@ -125,20 +125,20 @@ augroup filetype_md
     autocmd FileType markdown setlocal spell spelllang=es
 augroup end
 
-if executable('sourcekit-lsp')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'sourcekit-lsp',
-                \ 'cmd': {server_info->['sourcekit-lsp']},
-                \ 'whitelist': ['swift'],
-                \ 'config': { 'filter': { 'name': 'contains' } }
-                \ })
-endif
+" if executable('sourcekit-lsp')
+    " au User lsp_setup call lsp#register_server({
+                " \ 'name': 'sourcekit-lsp',
+                " \ 'cmd': {server_info->['sourcekit-lsp']},
+                " \ 'whitelist': ['swift'],
+                " \ 'config': { 'filter': { 'name': 'contains' } }
+                " \ })
+" endif
 
-if executable('clangd')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'clangd',
-                \ 'cmd': {server_info->['clangd', '-background-index']},
-                \ 'whitelist': ['c', 'cpp'],
-                \ 'config': { 'filter': { 'name': 'contains' } }
-                \ })
-endif
+" if executable('clangd')
+    " au User lsp_setup call lsp#register_server({
+                " \ 'name': 'clangd',
+                " \ 'cmd': {server_info->['clangd', '-background-index']},
+                " \ 'whitelist': ['c', 'cpp'],
+                " \ 'config': { 'filter': { 'name': 'contains' } }
+                " \ })
+" endif
