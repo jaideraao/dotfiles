@@ -12,7 +12,7 @@
 
 Después de una instalación reciente, ejecuto los siguientes comandos:
 
-```
+```git
 cd
 git init
 git remote add origin git@github.com:jaideraao/dotfiles.git
