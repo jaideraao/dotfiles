@@ -46,7 +46,8 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme default
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
@@ -89,31 +90,31 @@ let g:lsp_hover_ui='preview'
 let g:lsp_semantic_enabled=1
 let g:lsp_use_native_client=1
 
-augroup lenguaje_swift
-    autocmd!
-    autocmd BufWritePre *.swift LspDocumentFormatSyn
-    autocmd BufRead,BufNewFile *.swift,*.swiftinterface set ft=swift
+" augroup lenguaje_swift
+    " autocmd!
+    " autocmd BufWritePre *.swift LspDocumentFormatSyn
+    " autocmd BufRead,BufNewFile *.swift,*.swiftinterface set ft=swift
     " autocmd FileType c,cpp,h packadd termdebug
     " autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
-    autocmd FileType swift setlocal omnifunc=lsp#complete
-    autocmd FileType swift setlocal completefunc=lsp#complete
-    autocmd FileType swift setlocal tagfunc=lsp#tagfunc
+    " autocmd FileType swift setlocal omnifunc=lsp#complete
+    " autocmd FileType swift setlocal completefunc=lsp#complete
+    " autocmd FileType swift setlocal tagfunc=lsp#tagfunc
     " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
     " autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
     " autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
-augroup end
+" augroup end
 
-augroup lenguaje_c
-    autocmd!
-    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
-    autocmd FileType c,cpp,h packadd termdebug
-    autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
-    autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
-    autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
-augroup end
+" augroup lenguaje_c
+    " autocmd!
+    " autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
+    " autocmd FileType c,cpp,h packadd termdebug
+    " autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
+    " autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
+    " autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
+    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
+    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+" augroup end
 
 augroup filetype_yml
     autocmd!

@@ -18,7 +18,8 @@ setopt prompt_subst
 
 zstyle ':completion:*' menu select
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f'
+zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f '
 
-PROMPT='%3~ %B%F{9}/>%f%b '
-RPROMPT='${vcs_info_msg_0_}'
+PROMPT='${vcs_info_msg_0_}%B%F{9}/>%f%b '
+# PROMPT='%3~ ${vcs_info_msg_0_} %B%F{9}/>%f%b '
+# RPROMPT='${vcs_info_msg_0_}'
