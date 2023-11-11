@@ -46,8 +46,8 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-" colorscheme solarized
-colorscheme default
+colorscheme solarized
+" colorscheme default
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
