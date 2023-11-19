@@ -38,6 +38,6 @@ alias tree="tree -ahL 1 --dirsfirst"
 
 # fpath=(~/.zsh/site-functions $fpath)
 
-# HISTFILE=~/.histfile
-# HISTSIZE=1000
-# SAVEHIST=1000
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
