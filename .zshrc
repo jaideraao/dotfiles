@@ -36,14 +36,8 @@ fi
 alias ls="ls -Aho --color=auto"
 alias tree="tree -ahL 1 --dirsfirst"
 
-export CLICOLOR=1
-export COLORTERM=truecolor
-# export TERM=xterm-256color-italic
-export MANPAGER="vim +MANPAGER --not-a-term -"
-export GREP_OPTIONS="--color=auto"
-
 # fpath=(~/.zsh/site-functions $fpath)
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+# HISTFILE=~/.histfile
+# HISTSIZE=1000
+# SAVEHIST=1000
