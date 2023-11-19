@@ -13,8 +13,6 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f '
 
 PROMPT='${vcs_info_msg_0_}%B%F{9}/>%f%b '
-# PROMPT='%3~ ${vcs_info_msg_0_} %B%F{9}/>%f%b '
-# RPROMPT='${vcs_info_msg_0_}'
 
 autoload -Uz add-zsh-hook
 
