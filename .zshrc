@@ -33,7 +33,7 @@ if [[ "$TERM" == (Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|r
     add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-alias ls="ls -Aho --color=auto"
+alias ls="ls -Ahl --color=auto --group-directories-first"
 alias tree="tree -ahL 1 --dirsfirst"
 
 # fpath=(~/.zsh/site-functions $fpath)
