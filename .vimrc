@@ -51,7 +51,7 @@ colorscheme solarized
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
-highlight LineNr ctermbg=none
+" highlight LineNr ctermbg=none
 highlight MatchParen cterm=bold,underline ctermbg=none
 highlight SignColumn ctermbg=none
 highlight VertSplit ctermbg=none
