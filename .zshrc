@@ -8,8 +8,6 @@ precmd() { vcs_info }
 setopt prompt_subst
 
 zstyle ':completion:*' menu select
-# zstyle ':completion:*' rehash true
-# zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f '
 
@@ -30,7 +28,7 @@ if [[ "$TERM" == (gnome*|putty*|xterm*) ]]; then
     add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-alias ls="ls -Ahl --color=auto --group-directories-first"
+alias ls="ls -Ahl --color=auto"
 alias tree="tree -ahL 1 --dirsfirst"
 
 # fpath=(~/.zsh/site-functions $fpath)

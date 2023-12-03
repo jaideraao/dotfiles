@@ -1,7 +1,7 @@
 [user]
 	name = Jaider Angarita
 	email = jaideraao@icloud.com
-	signingKey = /home/jaideraao/.ssh/id_ed25519.pub
+	signingKey = /Users/jaideraao/.ssh/id_ed25519.pub
 [gpg]
 	format = ssh
 [commit]
