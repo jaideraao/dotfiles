@@ -33,10 +33,6 @@ alias tree="tree -ahL 1 --dirsfirst"
 
 # fpath=(~/.zsh/site-functions $fpath)
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
