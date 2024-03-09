@@ -3,16 +3,16 @@
 autoload -Uz compinit
 compinit
 
-# autoload -Uz vcs_info
-# precmd() { vcs_info }
-# setopt prompt_subst
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
 
 zstyle ':completion:*' menu select
-# zstyle ':vcs_info:git:*' check-for-changes true
-# zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f '
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '%F{4}%r%f en %F{13} %b%f '
 
-# PROMPT='${vcs_info_msg_0_}%B%F{9}/>%f%b '
-PROMPT='%B%F{9}/>%f%b '
+PROMPT='${vcs_info_msg_0_}%B%F{9}/>%f%b '
+# PROMPT='%B%F{9}/>%f%b '
 
 autoload -Uz add-zsh-hook
 
