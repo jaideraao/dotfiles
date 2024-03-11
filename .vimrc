@@ -103,17 +103,17 @@ let g:lsp_use_native_client=1
     " autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 " augroup end
 
-" augroup lenguaje_c
-    " autocmd!
-    " autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
-    " autocmd FileType c,cpp,h packadd termdebug
-    " autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
-    " autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
-    " autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
-" augroup end
+augroup lenguaje_c
+    autocmd!
+    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
+    autocmd FileType c,cpp,h packadd termdebug
+    autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
+    autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
+    autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
+    autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+    autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
+    autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+augroup end
 
 augroup filetype_yml
     autocmd!

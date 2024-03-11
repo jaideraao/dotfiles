@@ -11,9 +11,9 @@ set tui compact-source on
 set tui tab-width 4
 # set verbose on
 
-# tui reg all
-# tui focus cmd
-# tui enable
+tui reg all
+tui focus cmd
+tui enable
 
 # file ./bin/app.elf
 
