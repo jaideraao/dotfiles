@@ -23,8 +23,8 @@ set laststatus=0
 set linebreak
 set nocompatible
 set noswapfile
-set notimeout
-set nottimeout
+" set notimeout
+" set nottimeout
 set number
 set omnifunc=syntaxcomplete#complete
 set shiftwidth=4
@@ -50,10 +50,11 @@ colorscheme solarized
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
-" highlight LineNr ctermbg=none
+highlight LineNr ctermbg=none
 highlight MatchParen cterm=bold,underline ctermbg=none
 highlight SignColumn ctermbg=none
 highlight VertSplit ctermbg=none
+highlight debugPC cterm=italic ctermbg=lightgreen
 
 let mapleader="\<space>"
 
@@ -107,10 +108,12 @@ augroup lenguaje_c
     autocmd!
     autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
     autocmd FileType c,cpp,h packadd termdebug
-    autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
+    autocmd FileType c,cpp,h let g:termdebugger = "arm-none-eabi-gdb"
+    autocmd FileType c,cpp,h let g:termdebug_wide = 1
     autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
     autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
+    autocmd FileType c,cpp,h,make map <buffer> <leader>b :make all<cr>
     autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
     autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
 augroup end
@@ -134,11 +137,11 @@ augroup end
                 " \ })
 " endif
 
-" if executable('clangd')
-    " au User lsp_setup call lsp#register_server({
-                " \ 'name': 'clangd',
-                " \ 'cmd': {server_info->['clangd', '-background-index']},
-                " \ 'whitelist': ['c', 'cpp'],
-                " \ 'config': { 'filter': { 'name': 'contains' } }
-                " \ })
-" endif
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+                \ 'name': 'clangd',
+                \ 'cmd': {server_info->['clangd', '-background-index']},
+                \ 'whitelist': ['c', 'cpp'],
+                \ 'config': { 'filter': { 'name': 'contains' } }
+                \ })
+endif
