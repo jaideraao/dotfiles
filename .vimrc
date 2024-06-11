@@ -86,36 +86,21 @@ let g:markdown_folding=1
 let g:lsp_async_completion=1
 let g:lsp_diagnostics_echo_cursor=1
 let g:lsp_diagnostics_virtual_text_enabled=0
-let g:lsp_hover_ui='preview'
+" let g:lsp_hover_ui='preview'
 let g:lsp_semantic_enabled=1
 let g:lsp_use_native_client=1
 
-" augroup lenguaje_swift
-    " autocmd!
-    " autocmd BufWritePre *.swift LspDocumentFormatSyn
-    " autocmd BufRead,BufNewFile *.swift,*.swiftinterface set ft=swift
-    " autocmd FileType c,cpp,h packadd termdebug
-    " autocmd FileType c,cpp,h let g:termdebugger="arm-none-eabi-gdb"
-    " autocmd FileType swift setlocal omnifunc=lsp#complete
-    " autocmd FileType swift setlocal completefunc=lsp#complete
-    " autocmd FileType swift setlocal tagfunc=lsp#tagfunc
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
-" augroup end
-
 augroup lenguaje_c
     autocmd!
-    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSyn
+    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSync
     autocmd FileType c,cpp,h packadd termdebug
     autocmd FileType c,cpp,h let g:termdebugger = "arm-none-eabi-gdb"
     autocmd FileType c,cpp,h let g:termdebug_wide = 1
     autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
     autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
-    " autocmd FileType c,cpp,h,make noremap <buffer> <leader>b :make all<cr>
-    autocmd FileType c,cpp,h,make map <buffer> <leader>b :make all<cr>
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>c :make clean<cr>
-    autocmd FileType c,cpp,h,make noremap <buffer> <leader>r :make rebuild<cr>
+    autocmd FileType c,cpp,h,make map <buffer> <leader>a :make all<cr>
+    autocmd FileType c,cpp,h,make map <buffer> <leader>c :make clean<cr>
+    autocmd FileType c,cpp,h,make map <buffer> <leader>r :make rebuild<cr>
 augroup end
 
 augroup filetype_yml
@@ -127,15 +112,6 @@ augroup end
 augroup filetype_md
     autocmd FileType markdown setlocal spell spelllang=es
 augroup end
-
-" if executable('sourcekit-lsp')
-    " au User lsp_setup call lsp#register_server({
-                " \ 'name': 'sourcekit-lsp',
-                " \ 'cmd': {server_info->['sourcekit-lsp']},
-                " \ 'whitelist': ['swift'],
-                " \ 'config': { 'filter': { 'name': 'contains' } }
-                " \ })
-" endif
 
 if executable('clangd')
     au User lsp_setup call lsp#register_server({
