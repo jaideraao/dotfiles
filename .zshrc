@@ -36,9 +36,9 @@ alias tree="tree -ahL 1 --dirsfirst"
 
 # fpath=(~/.zsh/site-functions $fpath)
 
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# complete -C '/usr/local/bin/aws_completer' aws
 
 _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
