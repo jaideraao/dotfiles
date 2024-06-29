@@ -19,9 +19,3 @@
 [submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
 	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
-[submodule ".zsh/zsh-syntax-highlighting"]
-	path = .zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".zsh/zsh-autosuggestions"]
-	path = .zsh/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
