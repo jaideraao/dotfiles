@@ -37,6 +37,7 @@ set splitright
 " set t_Co=256
 set tabstop=4
 set term=$TERM
+set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -46,7 +47,7 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-" colorscheme solarized
+colorscheme solarized8_flat
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
@@ -80,28 +81,8 @@ let g:NERDToggleCheckAllLines=1
 let g:ansible_extra_keywords_highlight=1
 let g:ansible_name_highlight='b'
 
-let g:markdown_fenced_languages=['c', 'cpp', 'git', 'vim', 'swift', 'ansible']
+let g:markdown_fenced_languages=['git', 'vim', 'ansible']
 let g:markdown_folding=1
-
-let g:lsp_async_completion=1
-let g:lsp_diagnostics_echo_cursor=1
-let g:lsp_diagnostics_virtual_text_enabled=0
-" let g:lsp_hover_ui='preview'
-let g:lsp_semantic_enabled=1
-let g:lsp_use_native_client=1
-
-augroup lenguaje_c
-    autocmd!
-    autocmd BufWritePre *.c,*.cpp,*.h LspDocumentFormatSync
-    autocmd FileType c,cpp,h packadd termdebug
-    autocmd FileType c,cpp,h let g:termdebugger = "arm-none-eabi-gdb"
-    autocmd FileType c,cpp,h let g:termdebug_wide = 1
-    autocmd FileType c,cpp,h setlocal omnifunc=lsp#complete
-    autocmd FileType c,cpp,h setlocal tagfunc=lsp#tagfunc
-    autocmd FileType c,cpp,h,make map <buffer> <leader>a :make all<cr>
-    autocmd FileType c,cpp,h,make map <buffer> <leader>c :make clean<cr>
-    autocmd FileType c,cpp,h,make map <buffer> <leader>r :make rebuild<cr>
-augroup end
 
 augroup filetype_yml
     autocmd!
@@ -112,12 +93,3 @@ augroup end
 augroup filetype_md
     autocmd FileType markdown setlocal spell spelllang=es
 augroup end
-
-if executable('clangd')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'clangd',
-                \ 'cmd': {server_info->['clangd', '-background-index']},
-                \ 'whitelist': ['c', 'cpp'],
-                \ 'config': { 'filter': { 'name': 'contains' } }
-                \ })
-endif

@@ -19,3 +19,9 @@
 [submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
 	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule ".vim/pack/plugins/start/vim-solarized8"]
+	path = .vim/pack/plugins/start/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule ".vim/pack/plugins/start/onedark.vim"]
+	path = .vim/pack/plugins/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
