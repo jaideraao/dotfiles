@@ -35,7 +35,7 @@ set splitright
 set t_Co=256
 set tabstop=4
 set term=$TERM
-set termguicolors
+" set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
