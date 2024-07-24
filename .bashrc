@@ -57,9 +57,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]/>\[\033[00m\] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}/> '
 fi
 unset color_prompt force_color_prompt
 
@@ -115,8 +117,7 @@ fi
 
 export CLICOLOR=1
 export COLORTERM=truecolor
-export MANPAGER="vim +MANPAGER --not-a-term -"
-export GREP_OPTIONS="--color=auto"
+export MANPAGER='vim +MANPAGER --not-a-term -'
 
 alias ls='ls -Ahl --color=auto --group-directories-first'
 alias tree='tree -ahL 1 --dirsfirst'
