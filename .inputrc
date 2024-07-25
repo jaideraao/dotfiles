@@ -1,19 +1,9 @@
 # set editing-mode vi
 
-# Color files by types
-# Note that this may cause completion text blink in some terminals (e.g. xterm).
 set colored-stats on
-
-# Append char to indicate type
 set visible-stats on
-
-# Mark symlinked directories
 set mark-symlinked-directories on
-
-# Color the common prefix
 set colored-completion-prefix on
-
-# Color the common prefix in menu-complete
 set menu-complete-display-prefix on
 
 set show-all-if-unmodified on
