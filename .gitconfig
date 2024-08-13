@@ -6,3 +6,5 @@
 	format = ssh
 [commit]
 	gpgSign = true
+[diff]
+	tool = vimdiff
