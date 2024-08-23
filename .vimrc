@@ -45,7 +45,7 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-colorscheme solarized
+colorscheme habamax
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
