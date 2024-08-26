@@ -46,5 +46,5 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias xfreerdp='xfreerdp /dynamic-resolution /gdi:hw /gfx:avc420 +gfx-progressive +async-input +async-update +auto-reconnect +clipboard -grab-keyboard /kbd:"Spanish" /kbd-lang:0x240a'
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
