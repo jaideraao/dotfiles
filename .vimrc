@@ -35,7 +35,7 @@ set splitright
 set t_Co=256
 set tabstop=4
 set term=$TERM
-" set termguicolors
+set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -45,7 +45,7 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-" colorscheme habamax
+colorscheme habamax
 " colorscheme solarized
 
 highlight Comment cterm=italic
