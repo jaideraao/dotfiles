@@ -1,6 +1,6 @@
 ---
-title: "**dotfiles**"
-subtitle: "Administrar mis **dotfiles** como un repositorio git."
+title: "dotfiles"
+subtitle: "Administrar mis dotfiles como un repositorio git."
 author: "Jaider A. Angarita Ospino"
 date: Agosto 2, 2020
 lang: es-ES
@@ -8,7 +8,7 @@ lang: es-ES
 
 # Descripción
 
-Administrar mis **dotfiles** como un repositorio git.
+> Administrar mis **dotfiles** como un repositorio git.
 
 # Usando dotfiles
 
