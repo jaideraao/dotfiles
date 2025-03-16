@@ -1,14 +1,16 @@
 ---
-title: dotfiles
-author: Jaider A. Angarita Ospino
+title: "**dotfiles**"
+subtitle: "Administrar mis **dotfiles** como un repositorio git."
+author: "Jaider A. Angarita Ospino"
 date: Agosto 2, 2020
+lang: es-ES
 ---
 
-## Descripción
+# Descripción
 
 Administrar mis **dotfiles** como un repositorio git.
 
-## Usando dotfiles
+# Usando dotfiles
 
 - El archivo `.gitignore`, contiene esto: `*`, git ignorará todos los archivos del directorio `$HOME`.
 
@@ -20,7 +22,7 @@ Administrar mis **dotfiles** como un repositorio git.
 
 Después de una instalación reciente, ejecuto los siguientes comandos:
 
-```
+```bash
 cd
 git init
 git remote add origin git@github.com:jaideraao/dotfiles.git
