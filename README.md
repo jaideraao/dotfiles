@@ -1,6 +1,6 @@
 # Descripción
 
-> Administrar mis **dotfiles** como un repositorio git.
+Administrar mis **dotfiles** como un repositorio git.
 
 # Usando dotfiles
 
