@@ -20,8 +20,6 @@ git init
 git remote add origin git@github.com:jaideraao/dotfiles.git
 git fetch
 git checkout -f main
-git submodule init 
-git submodule update
 ```
 
 ## Créditos
