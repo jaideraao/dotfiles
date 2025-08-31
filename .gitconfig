@@ -1,0 +1,12 @@
+[user]
+	name = Jaider Angarita
+	email = jaideraao@icloud.com
+	signingKey = ~/.ssh/id_github
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true
+[diff]
+	tool = vimdiff
+[init]
+	defaultBranch = main

@@ -1,0 +1,18 @@
+<Stations>
+  <Station>
+    <uri>https://stream.avivamientoradio.net/radio/8000/radio.mp3</uri>
+    <name>Aviva2</name>
+  </Station>
+  <Station>
+    <uri>https://sonic.paulatina.co/7106/stream</uri>
+    <name>Radio Guatapurí</name>
+  </Station>
+  <Station>
+    <uri>https://playerservices.streamtheworld.com/api/livestream-redirect/BLURADIO_ADP.aac</uri>
+    <name>Blu Radio</name>
+  </Station>
+  <Station>
+    <uri>https://playerservices.streamtheworld.com/api/livestream-redirect/CARACOL_RADIOAAC.aac</uri>
+    <name>Caracol Radio</name>
+  </Station>
+</Stations>

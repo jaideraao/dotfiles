@@ -1,0 +1,19 @@
+# set editing-mode vi
+
+set bell-style none
+set colored-completion-prefix on
+set colored-stats on
+set completion-ignore-case on
+set enable-bracketed-paste on
+set expand-tilde off
+set mark-symlinked-directories on
+set match-hidden-files off
+set menu-complete-display-prefix on
+# set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set visible-stats on
+
+TAB:menu-complete
+ESC:kill-whole-line
+"\e[A":history-search-backward
+"\e[B":history-search-forward
