@@ -6,7 +6,7 @@ Administrar mis **dotfiles** como un repositorio git.
 
 - El archivo `.gitignore`, contiene esto: `*`, git ignorará todos los archivos del directorio `$HOME`.
 
-- Para rastrear cualquier archivo, es necesario anular el archivo `.gitignore` caso por caso con `git add -f [file]`.
+- Para rastrear cualquier archivo, es necesario anular el archivo `.gitignore`, caso por caso con el comando: `git add -f [file]`.
 
 - El archivo `.gitignore` no aplica a ningún archivo que ya se esté rastreando con git, por lo que cualquier cambio futuro aparece en el estado de git, y puede ser confirmado y/o publicado.
 
@@ -15,7 +15,7 @@ Administrar mis **dotfiles** como un repositorio git.
 
 ## Configuración
 
-Después de una instalación reciente, ejecuto los siguientes comandos:
+Después de una **instalación reciente** del Sistema Operativo, ejecuto los siguientes comandos:
 
 ```shell
 cd
