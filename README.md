@@ -1,9 +1,3 @@
----
-title: dotfiles como un repositorio git
-author: Jaider Angarita
-date: 2025-10-03
----
-
 # Descripción
 
 Administrar mis **dotfiles** como un repositorio git.
