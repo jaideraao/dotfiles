@@ -24,4 +24,5 @@ git checkout -f main
 
 ## Créditos
 
-Gracias a [Drew DeVault's blog](<https://drewdevault.com/2019/12/30/dotfiles.html>), la fuente con la que aprendí a administrar mis **dotfiles** como un repositorio git.
+> [!IMPORTANT]
+> Gracias a [Drew DeVault's blog](<https://drewdevault.com/2019/12/30/dotfiles.html>), la fuente con la que aprendí a administrar mis **dotfiles** como un repositorio git.
