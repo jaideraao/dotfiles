@@ -17,7 +17,7 @@ Administrar mis **dotfiles** como un repositorio git.
 
 Después de una **instalación reciente** del Sistema Operativo, ejecuto los siguientes comandos:
 
-```shell
+```bash
 cd
 git init
 git remote add origin git@github.com:jaideraao/dotfiles.git
