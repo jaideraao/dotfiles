@@ -10,6 +10,9 @@ Administrar mis **dotfiles** como un repositorio git.
 
 - El archivo `.gitignore` no aplica a ningún archivo que ya se esté rastreando con git, por lo que cualquier cambio futuro aparece en el estado de git, y puede ser confirmado y/o publicado.
 
+> [!IMPORTANT]
+> Importante seguir este flujo de trabajo, de esta manera conseguiras un repositorio consistente y seguro, pues no vas a desear incluir archivos importantes, como por ejemplo, los archivos que se encuentran en el directorio **`.ssh`**
+
 ## Configuración
 
 Después de una instalación reciente, ejecuto los siguientes comandos:
@@ -24,5 +27,4 @@ git checkout -f main
 
 ## Créditos
 
-> [!IMPORTANT]
-> Gracias a [Drew DeVault's blog](<https://drewdevault.com/2019/12/30/dotfiles.html>), la fuente con la que aprendí a administrar mis **dotfiles** como un repositorio git.
+Gracias a [Drew DeVault's blog](<https://drewdevault.com/2019/12/30/dotfiles.html>), la fuente con la que aprendí a administrar mis **dotfiles** como un repositorio git.
