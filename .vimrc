@@ -1,14 +1,17 @@
+" set clipboard=unnamed
+" set t_Co=256
+" set termguicolors
 set autoindent
 set autoread
 set autowrite
 set autowriteall
 set belloff=all
-" set clipboard=unnamed
 set completefunc=syntaxcomplete#Complete
 set completeopt=menuone,preview,popup,noinsert
 set cursorline
 set cursorlineopt=number
 set dictionary+=/usr/share/dict/words
+set diffopt=algorithm:histogram,filler,indent-heuristic,linematch:60,vertical
 set encoding=utf-8
 set expandtab
 set fileformat=unix
@@ -25,6 +28,7 @@ set nocompatible
 set noswapfile
 set number
 set omnifunc=syntaxcomplete#complete
+set scrollbind
 set shiftwidth=4
 set showmatch
 set smartindent
@@ -32,10 +36,8 @@ set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
-" set t_Co=256
 set tabstop=4
 set term=$TERM
-" set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
