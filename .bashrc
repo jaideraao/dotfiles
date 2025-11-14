@@ -129,4 +129,4 @@ export GIT_PS1_SHOWCOLORHINTS=1
 alias ls='ls -Ahl --color=auto --group-directories-first'
 alias tree='tree -ahL 1 --dirsfirst'
 alias grep='grep --color=auto'
-alias xfreerdp3='xfreerdp3 +async-channels +async-update +auto-reconnect /audio-mode:1 +clipboard +grab-keyboard +grab-mouse -themes +dynamic-resolution +prevent-session-lock +gdi:hw +gfx:AVC444:on /bpp:32 /size:1440x900 +kbd:layout:"Latin American",lang:0x240a'
+alias xfreerdp3='nohup xfreerdp3 +async-channels +async-update +auto-reconnect /audio-mode:1 +clipboard -grab-keyboard -grab-mouse -themes +dynamic-resolution +prevent-session-lock /gdi:hw +gfx:AVC444:on /bpp:32 /size:1440x900 +kbd:layout:"Latin American",lang:0x240a /p:jaao'
