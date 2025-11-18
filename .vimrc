@@ -48,8 +48,8 @@ syntax enable
 
 set background=dark
 " set background=light
-" colorscheme habamax
-colorscheme solarized
+colorscheme habamax
+" colorscheme solarized
 
 highlight Comment cterm=italic
 highlight CursorLineNr cterm=bold ctermfg=grey
