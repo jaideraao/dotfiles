@@ -47,8 +47,8 @@ filetype plugin indent on
 syntax enable
 
 set background=dark
-" colorscheme habamax
-colorscheme solarized
+colorscheme habamax
+" colorscheme solarized
 
 function! s:update_highlights()
     highlight Comment cterm=italic
