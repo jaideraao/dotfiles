@@ -1,8 +1,4 @@
-" set clipboard=unnamed
-" set foldlevel=99
-" set foldmethod=indent
-" set linebreak
-" set scrollbind
+" set clipboard=unnamedplus
 " set t_Co=256
 " set termguicolors
 set autoindent
@@ -29,6 +25,7 @@ set nocompatible
 set noswapfile
 set number
 set omnifunc=syntaxcomplete#complete
+set shiftround
 set shiftwidth=4
 set showmatch
 set smartindent
@@ -46,9 +43,9 @@ set wrap
 filetype plugin indent on
 syntax enable
 
-set background=dark
 " colorscheme habamax
 colorscheme solarized
+set background=dark
 
 function! s:update_highlights()
     highlight Comment cterm=italic
