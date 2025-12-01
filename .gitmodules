@@ -1,3 +1,12 @@
 [submodule ".vim/pack/plugin/start/nerdcommenter"]
 	path = .vim/pack/plugin/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/plugin/start/onedark.vim"]
+	path = .vim/pack/plugin/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
+[submodule ".vim/pack/plugin/start/vim-one"]
+	path = .vim/pack/plugin/start/vim-one
+	url = https://github.com/rakr/vim-one.git
+[submodule ".vim/pack/plugin/start/vim-visual-multi"]
+	path = .vim/pack/plugin/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
