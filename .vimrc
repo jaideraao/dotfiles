@@ -43,7 +43,8 @@ set wrap
 filetype plugin indent on
 syntax enable
 
-colorscheme habamax
+" colorscheme habamax
+colorscheme onedark
 " colorscheme solarized
 set background=dark
 
