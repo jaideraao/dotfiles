@@ -34,7 +34,7 @@ set splitbelow
 set splitright
 set tabstop=4
 set term=$TERM
-set termguicolors
+" set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -43,12 +43,8 @@ set wrap
 filetype plugin indent on
 syntax enable
 
-let g:onedark_color_overrides = {
-\ "background": {"gui": "#1E2127", "cterm": "235", "cterm16": "0" },
-\}
-
 " colorscheme habamax
-colorscheme onedark
+colorscheme solarized
 set background=dark
 
 function! s:update_highlights()
