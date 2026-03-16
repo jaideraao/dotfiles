@@ -20,23 +20,13 @@
         </mode>
       </monitor>
     </logicalmonitor>
-    <logicalmonitor>
-      <x>200</x>
-      <y>1080</y>
-      <scale>1.25</scale>
-      <monitor>
-        <monitorspec>
-          <connector>eDP-1</connector>
-          <vendor>CMN</vendor>
-          <product>0x1375</product>
-          <serial>0x00000000</serial>
-        </monitorspec>
-        <mode>
-          <width>1920</width>
-          <height>1080</height>
-          <rate>60.008</rate>
-        </mode>
-      </monitor>
-    </logicalmonitor>
+    <disabled>
+      <monitorspec>
+        <connector>eDP-1</connector>
+        <vendor>CMN</vendor>
+        <product>0x1375</product>
+        <serial>0x00000000</serial>
+      </monitorspec>
+    </disabled>
   </configuration>
 </monitors>
