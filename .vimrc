@@ -1,5 +1,6 @@
 " set clipboard=unnamedplus
 " set t_Co=256
+" set termguicolors
 set autoindent
 set autoread
 set autowrite
@@ -34,7 +35,6 @@ set splitbelow
 set splitright
 set tabstop=4
 set term=$TERM
-set termguicolors
 set ttyfast
 set wildmenu
 set wildoptions=pum
@@ -43,8 +43,8 @@ set wrap
 filetype plugin indent on
 syntax enable
 
-colorscheme habamax
-" colorscheme solarized
+" colorscheme habamax
+colorscheme solarized
 set background=dark
 
 function! s:update_highlights()
